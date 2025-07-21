@@ -7,6 +7,7 @@ import ResumeSection from "./Homepage/resume";
 import CompanyLogoSection from "./Homepage/company-logo";
 import CombinedChatJobSection from "./Homepage/liveAndchatSection";
 import Footer from "@/components/Footer";
+import PremiumSection from "./Homepage/PremiumSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     <ResumeSection/>
     <CompanyLogoSection/>
     <CombinedChatJobSection/>
+    <PremiumSection/>
     <Footer/>
     </>
   );
