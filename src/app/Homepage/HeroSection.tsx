@@ -61,7 +61,7 @@ const Hero = () => {
       <div className="w-full max-w-[1047px] px-4 mx-auto flex flex-col items-center text-center">
         {/* Title */}
         <h1 className="text-[28px] md:text-[48px] mt-8 mb-10 font-semibold font-[poppins] text-[#101022] leading-tight">
-          India's First AI-Powered{' '}
+          India First AI-Powered{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294] font-bold">
             Job Portal
           </span>{' '}
