@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Hero from "./Homepage/HeroSection";
-import CategoriesWithNews from "./Homepage/merge2and3";
-import ExpertsSection from "./Homepage/connection";
-import ResumeSection from "./Homepage/resume";
-import CompanyLogoSection from "./Homepage/company-logo";
-import CombinedChatJobSection from "./Homepage/liveAndchatSection";
+import Hero from "../components/Homepage/HeroSection";
+import CategoriesWithNews from "../components/Homepage/merge2and3";
+import ExpertsSection from "../components/Homepage/connection";
+import ResumeSection from "../components/Homepage/resume";
+import CompanyLogoSection from "../components/Homepage/company-logo";
+import CombinedChatJobSection from "../components/Homepage/liveAndchatSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {

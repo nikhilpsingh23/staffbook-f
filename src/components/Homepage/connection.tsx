@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { experts } from '../../data/experts';
+import { SITE_CONFIG } from '../../constants/siteconfig';
 
 const ExpertsSection = () => {
   const col1Ref = useRef<HTMLDivElement>(null);
@@ -12,7 +14,6 @@ const ExpertsSection = () => {
   useEffect(() => {
     const loopScroll = (el: HTMLDivElement, direction: 'up' | 'down') => {
       const distance = el.scrollHeight / 2;
-
       gsap.fromTo(
         el,
         { y: direction === 'up' ? 0 : -distance },
@@ -24,19 +25,10 @@ const ExpertsSection = () => {
         }
       );
     };
-
     if (col1Ref.current) loopScroll(col1Ref.current, 'down');
     if (col2Ref.current) loopScroll(col2Ref.current, 'up');
     if (col3Ref.current) loopScroll(col3Ref.current, 'down');
   }, []);
-
-  const cards = [
-    { name: 'Radhika', role: 'Sales Executive at Walmart' },
-    { name: 'Ashok Kumar', role: 'Visual Designer at Google' },
-    { name: 'Preeti Mohal', role: 'Senior Designer at Notion' },
-    { name: 'Rahul Kalki', role: 'Finance Executive at Upwork' },
-    { name: 'Naina Khurana', role: 'Senior Designer at Notion' },
-  ];
 
   return (
     <section className="w-full bg-white py-10 px-4">
@@ -44,34 +36,31 @@ const ExpertsSection = () => {
         {/* Left Column */}
         <div className="md:w-1/2 w-full flex gap-[10px] overflow-hidden px-2 md:px-0 mt-6 md:mt-0 h-[500px] md:h-auto">
           <div ref={col1Ref} className="flex flex-col gap-[10px]">
-            {[...cards, ...cards].map((card, i) => (
+            {[...experts, ...experts].map((card, i) => (
               <Card key={`c1-${i}`} {...card} />
             ))}
           </div>
           <div ref={col2Ref} className="flex flex-col gap-[10px]">
-            {[...cards, ...cards].map((card, i) => (
+            {[...experts, ...experts].map((card, i) => (
               <Card key={`c2-${i}`} {...card} />
             ))}
           </div>
           <div ref={col3Ref} className="flex flex-col gap-[10px]">
-            {[...cards, ...cards].map((card, i) => (
+            {[...experts, ...experts].map((card, i) => (
               <Card key={`c3-${i}`} {...card} />
             ))}
           </div>
         </div>
-
         {/* Right Column */}
         <div className="md:w-1/2 w-full text-white relative flex flex-col justify-between py-10 px-4 md:px-12">
           {/* Title */}
           <h2 className="text-[28px] md:text-[48px] font-semibold leading-tight mb-6 md:mb-0">
-            Nurture your professional <span className="font-bold">relationships with</span><br />
-            industry experts
+            {SITE_CONFIG.homepage.connectionTitle}
           </h2>
-
           {/* Button */}
           <div className="flex md:justify-end">
             <button className="h-[58px] md:h-[68px] w-full md:w-[258px] bg-white text-[#921294] text-base md:text-lg font-semibold rounded-full hover:bg-gray-100 transition">
-              Explore Now
+              {SITE_CONFIG.homepage.exploreNow}
             </button>
           </div>
         </div>
@@ -101,8 +90,8 @@ const Card = ({ name, role }: { name: string; role: string }) => (
 );
 
 const IconButton = ({ icon }: { icon: string }) => (
-  <button className="bg-white/20 rounded-full w-8 h-8 flex items-center justify-center text-white text-lg">
-    {icon}
+  <button className="bg-white/20 rounded-full p-2 hover:bg-white/40 transition">
+    <span className="text-lg md:text-xl">{icon}</span>
   </button>
 );
 

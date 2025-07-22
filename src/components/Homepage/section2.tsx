@@ -1,28 +1,15 @@
 'use client'
 
-import {
-  Megaphone, Users, Code, Monitor,
-  BarChart, BookOpen, Briefcase, Headphones
-} from 'lucide-react'
+import { categories } from '../../data/categories';
+import { SITE_CONFIG } from '../../constants/siteconfig';
 
 const Categories = () => {
-  const categories = [
-    { title: "Marketing & Communications", jobs: "236 Jobs available", icon: Megaphone },
-    { title: "Human Research & Development", jobs: "236 Jobs available", icon: Users },
-    { title: "Design & Development", jobs: "236 Jobs available", icon: Code },
-    { title: "Information & Technology", jobs: "236 Jobs available", icon: Monitor },
-    { title: "Finance & Buisness", jobs: "236 Jobs available", icon: BarChart },
-    { title: "Health & Education", jobs: "236 Jobs available", icon: BookOpen },
-    { title: "Project Management & Software", jobs: "236 Jobs available", icon: Briefcase },
-    { title: "Customer & Support Care", jobs: "236 Jobs available", icon: Headphones }
-  ];
-
   return (
     <section className="w-full px-4 md:px-8 py-16 bg-white">
       {/* Heading */}
       <div className="max-w-[1371px] w-full mx-auto text-center mb-12">
         <h1 className="text-[32px] sm:text-[40px] md:text-[48px] font-semibold text-[#101022] leading-tight">
-          Jobs in most popular{' '}
+          {SITE_CONFIG.homepage.heroTitle.split('with')[0]}
           <span className="bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-transparent bg-clip-text">Roles</span>
         </h1>
       </div>
@@ -30,7 +17,7 @@ const Categories = () => {
       {/* First Row - 4 Cards */}
       <div className="max-w-[1371px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5 mb-8">
         {categories.slice(0, 4).map((category, index) => {
-          const Icon = category.icon;
+          const Icon = require('lucide-react')[category.icon];
           return (
             <div
               key={index}
@@ -49,9 +36,9 @@ const Categories = () => {
       </div>
 
       {/* Second Row - 4 Cards */}
-      <div className="max-w-[1230px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5">
+      <div className="max-w-[1371px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5">
         {categories.slice(4).map((category, index) => {
-          const Icon = category.icon;
+          const Icon = require('lucide-react')[category.icon];
           return (
             <div
               key={index}
