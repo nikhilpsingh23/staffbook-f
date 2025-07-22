@@ -74,12 +74,12 @@ export default function ResumeSection() {
                 className="resume-center-img"
               />
               {/* Scanner corners (decorative) */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 rounded-tl-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} />
+              {/* <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 rounded-tl-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} />
               <div className="absolute -top-4 -right-4 w-8 h-8 border-t-4 border-r-4 rounded-tr-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} />
               <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-4 border-l-4 rounded-bl-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} />
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 rounded-br-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} />
+              <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 rounded-br-xl border-gradient-corner" style={{borderImage: 'linear-gradient(90deg, #5B5DE6, #921294) 1'}} /> */}
               {/* Scanner line (decorative) */}
-              <div className="absolute left-0 right-0 top-1/2 h-1 bg-gradient-to-r from-[#F97316] via-yellow-400 to-yellow-300 rounded-full shadow-lg" style={{transform: 'translateY(-50%)'}} />
+              {/* <div className="absolute left-0 right-0 top-1/2 h-1 bg-gradient-to-r from-[#F97316] via-yellow-400 to-yellow-300 rounded-full shadow-lg" style={{transform: 'translateY(-50%)'}} /> */}
             </div>
           </div>
           {/* Right Steps */}
