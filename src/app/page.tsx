@@ -8,19 +8,21 @@ import CompanyLogoSection from "../components/Homepage/company-logo";
 import CombinedChatJobSection from "../components/Homepage/liveAndchatSection";
 import Footer from "@/components/Footer";
 import PremiumSection from "../components/Homepage/PremiumSection";
+import JobPostSection from "@/components/Homepage/jobpost";
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Hero/>
     <CategoriesWithNews/>
     <ExpertsSection/>
     <ResumeSection/>
     <CompanyLogoSection/>
     <CombinedChatJobSection/>
+    {/* <JobPostSection /> */}
     <PremiumSection/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }

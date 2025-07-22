@@ -22,7 +22,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Load user from localStorage on mount
     const stored = localStorage.getItem('authUser');
     if (stored) setUser(JSON.parse(stored));
-    signup("test","test@abc.com","1111")
   }, []);
 
   const login = async (email: string, password: string) => {
