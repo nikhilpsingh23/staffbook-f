@@ -13,7 +13,7 @@ const iconMap = {
 
 export default function JobSearchBar() {
   return (
-    <section className="w-full mt-12 bg-white py-10 md:py-24 relative">
+    <section className="w-full mt-12 bg-gray-50 py-10 md:py-24 relative">
       <div className="w-full  max-w-[95%] mx-auto relative px-2 md:px-0">
         {/* Floating Menu */}
 
