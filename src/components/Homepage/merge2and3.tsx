@@ -44,12 +44,24 @@ const CategoriesWithNews = () => {
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-medium text-gray-900 leading-tight mb-4">
             {SITE_CONFIG.homepage.newsTitle}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
-              {SITE_CONFIG.homepage.newsTitle.split(' ')[1]}
+              {" "}{SITE_CONFIG.homepage.newsTitle.split(' ')[1]}
             </span>
           </h2>
           <p className="text-[20px] sm:text-[24px] md:text-3xl font-medium text-gray-700 mb-12">
             {SITE_CONFIG.homepage.newsDescription}
           </p>
+          <div className="relative w-full max-w-4xl mx-auto mt-8">
+            <Image
+              src="/homePage/professional.png"
+              alt="Staffbook UI Mockup"
+              width={1000}
+              height={800}
+              layout="responsive"
+              objectFit="contain"
+              quality={100}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

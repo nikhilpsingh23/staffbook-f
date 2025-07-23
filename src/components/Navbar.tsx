@@ -3,24 +3,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { SITE_CONFIG } from '../constants/siteconfig';
+import { LOGGED_IN_LINKS, SITE_CONFIG } from '../constants/siteconfig';
 import GradientButton from './shared/GradientButton';
 import { useAuth } from '../context/AuthContext';
 import { FiBell, FiMessageSquare } from 'react-icons/fi';
+import ProfileAvatar from './shared/ProfileAvatar';
+import { usePathname } from 'next/navigation';
 
-const LOGGED_IN_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'Jobs', href: '/jobs' },
-  { label: 'Networking', href: '/networking' },
-  { label: 'My Connections', href: '/connections' },
-  { label: 'Services', href: '/services' },
-];
+
 
 const Navbar = () => {
+  const path=usePathname()
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = SITE_CONFIG.navbar.navLinks;
   const signUpText = SITE_CONFIG.navbar.signUp;
   const { user } = useAuth();
+
 
   return (
     <div className="w-full h-[70px] bg-white shadow-sm fixed top-0 z-50 overflow-x-hidden">
@@ -42,27 +40,13 @@ const Navbar = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-[#18192B] text-[16px] font-medium font-sans px-4 py-2 rounded-full ${link.label === 'Home' ? 'bg-[#F3EFFF] text-[#18192B]' : 'hover:text-primary transition-colors'}`}
+                className={`text-[#18192B] text-[16px] font-medium font-sans px-4 py-2 rounded-full ${link.href === path ? 'bg-[#F3EFFF] text-[#18192B]' : 'hover:text-primary transition-colors'}`}
               >
                 {link.label}
               </Link>
             ))}
-            <button className="ml-4 p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <FiMessageSquare className='text-[#101022]'  size={22} />
-            </button>
-            <button className="ml-1 p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <FiBell className='text-[#101022]' size={22}  />
-            </button>
-            <div className="flex items-center gap-2 ml-4">
-              <Image
-                src="/homePage/profile.png"
-                alt={user.name}
-                width={36}
-                height={36}
-                className="rounded-full object-cover border border-gray-200"
-              />
-              <span className="text-xs text-[#18192B] font-medium font-sans">{user.name}</span>
-            </div>
+            <NavbarIconButton/>
+            <ProfileAvatar name={user.name} />
           </nav>
         ) : (
           <nav className="hidden md:flex items-center gap-8">
@@ -75,9 +59,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <Link key={"signup"}
+                href={"/signup"}>
             <GradientButton className="w-[110px] h-[42px] ml-4 text-[16px] font-poppins">
               {signUpText}
             </GradientButton>
+            </Link>
           </nav>
         )}
         {/* Mobile Toggle */}
@@ -105,26 +92,47 @@ const Navbar = () => {
             </Link>
           ))}
           {user ? (
-            <div className="flex items-center gap-2 mt-4">
-              <Image
-                src="/homePage/profile.png"
-                alt={user.name}
-                width={36}
-                height={36}
-                className="rounded-full object-cover border border-gray-200"
-              />
-              <span className="text-xs text-[#18192B] font-medium font-sans">{user.name}</span>
-            </div>
+            <>
+              <NavbarIconButton />
+            <ProfileAvatar name={user.name} className="mt-4" size={80} />
+            </>
           ) : (
+            <Link key={"signup"}
+                href={"/signup"}>
             <GradientButton className="w-full h-[42px] text-[16px] font-poppins">
               {signUpText}
             </GradientButton>
+            </Link>
           )}
         </div>
       )}
     </div>
   );
 };
+
+export const NavbarIconButton = () => {
+
+  return(
+    <div className='flex flex-row gap-4'>
+    <button className=" p-2 rounded-full hover:bg-gray-100 transition-colors">
+              <FiMessageSquare size={22} className='text-gray-500' />
+            </button>
+            <button className="ml-1 p-2 rounded-full hover:bg-gray-100 transition-colors">
+              <FiBell size={22} className='text-gray-500' />
+            </button>
+    </div>
+  )
+}
+// export const NavbarSignupButton = () => {
+//   const signUpText = SITE_CONFIG.navbar.signUp;
+//   return(
+//     <GradientButton className="w-full h-[42px] text-[16px] font-poppins" onClick={()=>{
+//       router.push('/signup')
+//     }}>
+//               {signUpText}
+//             </GradientButton>
+//   )
+// }
 
 export default Navbar;
  

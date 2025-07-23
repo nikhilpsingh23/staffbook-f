@@ -1,11 +1,12 @@
 import Hero from "@/components/Homepage/HeroSection";
 import TwoColumnLayout from "@/components/Hirepage/TwoColumnLayout";
 import ProfileSidebar from "@/components/shared/ProfileSidebar";
-import RightSearchBarSection from "@/components/shared/RightSearchBarSection";
 import PostJobSection from "@/components/Hirepage/PostJobSection";
 import StorySection from "@/components/shared/StorySection";
 import ManageJobPostSection from "@/components/Hirepage/ManageJobPostSection";
 import ResumeDownloadSection from "@/components/shared/ResumeDownloadSection";
+import JobSearchBar from "@/components/shared/SubMenu";
+import MapFilterSection from "@/components/shared/MapFilterSection";
 
 export default function Page() {
     return(
@@ -15,9 +16,10 @@ export default function Page() {
               right={
               <>
               <StorySection/>
-              <RightSearchBarSection/>
+              <JobSearchBar/>
                 <PostJobSection/>
                 <ManageJobPostSection/>
+                <MapFilterSection/>
                 <div className="text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B]">Ready To Join Candidates</div>
                   <ResumeDownloadSection/>
                   <div className="text-[2rem] mt-6 font-Montserrat font-semibold text-[#18192B]">Candidates according to your requirements</div>

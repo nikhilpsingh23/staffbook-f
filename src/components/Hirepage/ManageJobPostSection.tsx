@@ -154,13 +154,18 @@ const ManageJobPostSection = () => {
                 <span className={`w-2 h-2 rounded-full ${job.isClosed ? "bg-red-500" : "bg-green-500"}`}></span>
                 <span className={job.isClosed ? "text-[#F43F5E]" : "text-[#22C55E]"}>Status: {job.isClosed ? "Closed" : "Active"}</span>
               </div>
-              {/* Button */}
-              <button
-                className={`mt-2 w-[15.5rem] h-[1.8125rem] text-[0.875rem] font-Montserrat font-medium rounded-[0.375rem] border ${job.isClosed ? "border-[#E5E7EB] text-[#8B8B8B] bg-[#F9FAFB]" : "border-[#7C3AED] text-[#7C3AED] bg-white hover:bg-[#F3E8FF]"}`} // 248px = 15.5rem, 29px = 1.8125rem, 6px = 0.375rem
-                disabled={job.isClosed}
-              >
-                View Responses ({job.responses})
-              </button>
+{/* Button */}
+<button
+  className={`mt-2 px-3 h-[1.8125rem] text-[0.875rem] font-Montserrat font-medium rounded-[0.375rem] border
+    ${job.isClosed
+      ? "border-[#E5E7EB] text-[#8B8B8B] bg-[#F9FAFB] cursor-not-allowed"
+      : "border-[#7C3AED] text-[#7C3AED] bg-white hover:bg-[#F3E8FF] cursor-pointer"
+    } 
+    whitespace-nowrap max-w-full`}
+  disabled={job.isClosed}
+>
+  View Responses ({job.responses})
+</button>
             </div>
           ))}
         </div>

@@ -11,14 +11,16 @@ import PremiumSection from "../components/Homepage/PremiumSection";
 export default function Home() {
   return (
     <>
-    
+    {/* <Navbar/> */}
     <Hero/>
     <CategoriesWithNews/>
     <ExpertsSection/>
     <ResumeSection/>
     <CompanyLogoSection/>
     <CombinedChatJobSection/>
+    {/* <JobPostSection /> */}
     <PremiumSection/>
+    {/* <Footer/> */}
     </>
   );
 }
