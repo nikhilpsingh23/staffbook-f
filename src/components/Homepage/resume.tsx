@@ -9,11 +9,11 @@ import { leftSteps, rightSteps } from '../../data/resumeSteps';
 import { Step } from '../../types/resume';
 import { TemplateIcon, InfoIcon, SuggestionIcon, DownloadIcon } from '../svgs/ResumeStepIcons';
 
-const stepIcons = [
-  <TemplateIcon />,
-  <InfoIcon />,
-  <SuggestionIcon />,
-  <DownloadIcon />,
+const stepIcons: React.ReactElement[] = [
+  <TemplateIcon key="template" />,
+  <InfoIcon key="info" />,
+  <SuggestionIcon key="suggestion" />,
+  <DownloadIcon key="download" />,
 ];
 
 export default function ResumeSection() {

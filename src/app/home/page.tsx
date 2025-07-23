@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import CreativesSection from "../../components/Postloginpage/CreativeSection";
 import MapFilterSection from "@/components/shared/MapFilterSection";
 import FeaturedJobsSection from "@/components/shared/FeatureSection";

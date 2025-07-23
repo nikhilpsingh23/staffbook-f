@@ -1,9 +1,7 @@
 'use client';
 
-import React from 'react';
 import * as LucideIcons from 'lucide-react';
 import { menuItems, inputLabels } from '../../data/subMenu';
-import { SITE_CONFIG } from '../../constants/siteconfig';
 
 export default function JobSearchBar() {
   return (

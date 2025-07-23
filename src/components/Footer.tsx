@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
 import { SITE_CONFIG } from '../constants/siteconfig';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, GoogleIcon } from './svgs/SocialIcons';
 

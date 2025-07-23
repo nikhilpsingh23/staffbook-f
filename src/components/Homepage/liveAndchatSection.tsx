@@ -1,7 +1,7 @@
 'use client'
 
+import Image from 'next/image';
 import { SITE_CONFIG } from '../../constants/siteconfig';
-import React from 'react';
 
 export default function CombinedChatJobSection() {
   return (
@@ -29,10 +29,12 @@ export default function CombinedChatJobSection() {
         </div>
         {/* Right Column - Image */}
         <div className="flex justify-center">
-          <img
-            src="/homePage/chat (1).png"
+          <Image
+            src="/homePage/chat1.png"
             alt="Live Chat UI Mockup"
             className="w-full max-w-[400px] h-auto"
+            height={500}
+            width={500}
           />
         </div>
       </div>
@@ -40,7 +42,9 @@ export default function CombinedChatJobSection() {
       <div className="max-w-[1335px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
         {/* Left Column - Image */}
         <div className="flex justify-start">
-          <img
+          <Image
+            height={500}
+            width={500}
             src="/homePage/job.png"
             alt="Job Card Preview"
             className="w-full max-w-[400px] h-auto"
