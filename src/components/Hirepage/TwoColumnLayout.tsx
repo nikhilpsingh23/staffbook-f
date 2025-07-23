@@ -12,8 +12,8 @@ export default function TwoColumnLayout({ left, right }: TwoColumnLayoutProps) {
       <aside className="w-[273px] flex-shrink-0 bg-white md:rounded-r-2xl shadow md:mt-8 md:mb-8 md:h-[calc(100vh-64px)]">
         {left}
       </aside>
-      {/* Right Side */}
-      <main className="w-[116px] flex-grow md:mt-8 md:mb-8">
+      {/* Right Side */} 
+      <main className="w-[1140px] flex-grow md:mt-8 md:mb-8">
         {right}
       </main>
     </div>
