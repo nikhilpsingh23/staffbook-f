@@ -12,7 +12,7 @@ import ConnectWithRecruiterSection from "@/components/Postloginpage/ConnectWithR
 export default function Page() {
     return(
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <JobSearchBar/>
         <FeaturedJobsSection/>
         <CreativesSection/>
@@ -21,7 +21,7 @@ export default function Page() {
         <ConnectWithRecruiterSection/>
         <ChatShowcaseSection/>
         <ATSResumeSection/>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     );
 };
