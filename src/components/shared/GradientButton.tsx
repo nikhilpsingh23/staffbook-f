@@ -5,7 +5,7 @@ interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   className?: string;
 }
 
-const GradientButton = ({ children, className = '', ...props }:any) => (
+const GradientButton = ({ children, className = '', ...props }:GradientButtonProps & React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={`rounded-full flex bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white font-semibold shadow-md hover:opacity-90 transition px-6 py-2 ${className}`}
     {...props}
