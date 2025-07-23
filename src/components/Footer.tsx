@@ -29,13 +29,13 @@ export default function Footer() {
                 height={72}
                 className="object-contain"
               />
-              <Image
+              {/* <Image
                 src="/homePage/google-play-badge.png"
                 alt="Google Play"
                 width={110}
                 height={32}
                 className="object-contain"
-              />
+              /> */}
             </div>
             <div className="flex flex-col items-center gap-2">
               <Image
@@ -45,13 +45,13 @@ export default function Footer() {
                 height={72}
                 className="object-contain"
               />
-              <Image
+              {/* <Image
                 src="/homePage/app-store-badge.png"
                 alt="App Store"
                 width={110}
                 height={32}
                 className="object-contain"
-              />
+              /> */}
             </div>
           </div>
         </div>

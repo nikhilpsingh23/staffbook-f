@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { SITE_CONFIG } from '@/constants/siteconfig';
 import GradientButton from '../shared/GradientButton';
 
@@ -91,9 +91,11 @@ const SignupLayout: React.FC<React.PropsWithChildren<SignupLayoutProps>> = ({
           </button> */}
           <div className='flex'>
 
-          <GradientButton type="submit">
+            <button type="submit" >
+          <GradientButton onClick={(e)=>onSubmit(e as FormEvent<HTMLFormElement>)}>
             {SITE_CONFIG.signup.registerButton}
           </GradientButton>
+            </button>
           </div>
         </div>
       </form>
