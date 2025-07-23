@@ -91,7 +91,7 @@ const SignupLayout: React.FC<React.PropsWithChildren<SignupLayoutProps>> = ({
           </button> */}
           <div className='flex'>
 
-          <GradientButton type="submit" onClick={onSubmit}>
+          <GradientButton type="submit">
             {SITE_CONFIG.signup.registerButton}
           </GradientButton>
           </div>
