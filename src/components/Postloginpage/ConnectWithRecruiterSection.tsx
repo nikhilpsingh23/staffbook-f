@@ -39,7 +39,7 @@ export default function ConnectWithRecruiterSection() {
     return () => ctx.revert();
   }, []);
 
-  const Card = (person: any, idx: number, keyPrefix: string) => (
+  const Card = (person: Person, idx: number, keyPrefix: string) => (
     <div
       key={`${keyPrefix}-${idx}`}
       className="relative w-[217px] h-[313px] rounded-[12px] overflow-hidden shrink-0 bg-black group"
