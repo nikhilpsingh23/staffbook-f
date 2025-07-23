@@ -1,15 +1,7 @@
 'use client';
 
-import { Home, Search, User } from 'lucide-react';
 import { menuItems, inputLabels } from '../../data/subMenu';
 
-// Create a mapping
-const iconMap = {
-  Home,
-  Search,
-  User,
-  // ...add all icons you use in menuItems
-};
 
 export default function JobSearchBar() {
   return (
@@ -19,10 +11,11 @@ export default function JobSearchBar() {
 
         <div className="absolute top-[-46px] left-1/2 -translate-x-1/2 w-full max-w-[95%] h-[93px] bg-gradient-to-r from-[#5b5be7] to-[#b14be4] rounded-full shadow-lg flex items-center justify-around px-2 md:px-8 z-10 overflow-x-auto gap-2 md:gap-0">
           {menuItems.map((item, index) => {
-            const Icon = iconMap[item.icon as keyof typeof iconMap];
+             const Icon = item.icon;
+            // console.log(Icon,"------");
             return (
               <div key={index} className="flex flex-col items-center text-white text-xs md:text-sm min-w-[50px]">
-                {Icon ? <Icon size={22} /> : null}
+                {Icon ? <Icon  size={22} className='text-white' /> : null}
                 <span className="mt-1 whitespace-nowrap">{item.label}</span>
               </div>
             );
