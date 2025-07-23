@@ -6,6 +6,8 @@ import { Video } from 'lucide-react';
 import { CgProfile } from 'react-icons/cg';
 import gsap from 'gsap';
 
+type Person = { name: string; role: string; img: string };
+
 const people = [
   { name: 'Rahul Kalki', role: 'Finance Executive at Upwork', img: '/homePage/profile.png' },
   { name: 'Komal Kalki', role: 'Finance Executive at Upwork', img: '/homePage/profile.png' },
