@@ -37,7 +37,7 @@ export default function PremiumSection() {
           {/* Right Side: Image with top-right badge */}
           <div className="relative w-full lg:w-[480px] flex justify-center items-center">
             <Image
-              src="/homePage/professional.png"
+              src="/homePage/premium.png"
               alt="Premium Access"
               width={480}
               height={480}

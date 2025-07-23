@@ -21,7 +21,6 @@ export default function Page() {
         <ConnectWithRecruiterSection/>
         <ChatShowcaseSection/>
         <ATSResumeSection/>
-        <Footer/>
         </>
     );
 };

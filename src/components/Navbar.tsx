@@ -48,10 +48,10 @@ const Navbar = () => {
               </Link>
             ))}
             <button className="ml-4 p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <FiMessageSquare size={22} />
+              <FiMessageSquare className='text-[#101022]'  size={22} />
             </button>
             <button className="ml-1 p-2 rounded-full hover:bg-gray-100 transition-colors">
-              <FiBell size={22} />
+              <FiBell className='text-[#101022]' size={22}  />
             </button>
             <div className="flex items-center gap-2 ml-4">
               <Image

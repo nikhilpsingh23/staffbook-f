@@ -28,7 +28,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-8 md:py-16 relative overflow-x-auto">
+    <section className="w-full bg-white py-15 md:py-20 relative overflow-x-auto">
       <div className="w-full max-w-[1600px] px-2 md:px-4 mx-auto flex flex-col items-center text-center relative">
         {/* Title */}
         <h1 className="text-[28px] md:text-[48px] mt-8 mb-10 font-semibold font-[poppins] text-[#101022] leading-tight">
