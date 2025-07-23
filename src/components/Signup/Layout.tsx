@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { SITE_CONFIG } from '@/constants/siteconfig';
-import TextInput from '@/components/shared/TextInput';
 import GradientButton from '../shared/GradientButton';
 
 interface SignupLayoutProps {

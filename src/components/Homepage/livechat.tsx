@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SITE_CONFIG } from '../../constants/siteconfig';
 
 export default function LiveChatSection() {
@@ -23,7 +24,9 @@ export default function LiveChatSection() {
         </div>
         {/* Right Column - Image */}
         <div className="flex justify-center">
-          <img
+          <Image
+            height={500}
+            width={500}
             src="/homePage/chat (1).png"
             alt="Live Chat UI Mockup"
             className="rounded-2xl shadow-lg w-full max-w-[400px] h-auto"

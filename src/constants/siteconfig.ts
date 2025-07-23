@@ -52,6 +52,13 @@ export const SITE_CONFIG = {
     ],
     signUp: 'Sign up',
   },
+  subMenu: {
+    inputPlaceholder: 'Enter preferred Role',
+  },
+  featuredJobsSection: {
+    title: 'Featured Jobs',
+    seeAll: 'See All',
+  },
   signup: {
     heading: 'Create your profile',
     subheading: "+Join india's no. 1 job portal",
@@ -79,9 +86,9 @@ export const SITE_CONFIG = {
     jobUpdatesLabel: 'Send job updates me through mail, whatsapp',
     registerButton: 'Register now',
   },
-}; 
+};
 export const LOGGED_IN_LINKS = [
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/home' },
   { label: 'Jobs', href: '/jobs' },
   { label: 'Networking', href: '/networking' },
   { label: 'My Connections', href: '/connections' },

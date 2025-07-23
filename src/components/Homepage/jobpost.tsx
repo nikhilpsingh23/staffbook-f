@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SITE_CONFIG } from '../../constants/siteconfig';
 
 export default function JobPostSection() {
@@ -6,7 +7,9 @@ export default function JobPostSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Column - Image */}
         <div className="flex justify-center">
-          <img
+          <Image
+          height={500}
+          width={500}
             src="/homePage/job.png"
             alt="Job Card Preview"
             className="max-w-full h-auto"

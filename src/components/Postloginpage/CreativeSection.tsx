@@ -1,6 +1,6 @@
 'use client';
 
-import { Video, Plus } from 'lucide-react';
+import { Video } from 'lucide-react';
 import Image from 'next/image';
 import { CgProfile } from 'react-icons/cg';
 
