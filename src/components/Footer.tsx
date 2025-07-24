@@ -7,7 +7,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, GoogleIcon } from './svgs/So
 export default function Footer() {
   return (
     <footer className="w-full bg-white border-t py-8 md:py-12">
-      <div className="mx-auto w-full max-w-[1370px] flex flex-col md:flex-row justify-between items-start px-4 gap-10 md:gap-20">
+      <div className="mx-auto w-full max-w-screen flex flex-col md:flex-row justify-between items-start px-4 gap-10 md:gap-20">
         {/* Left Column: Logo + QR */}
         <div className="flex flex-col items-start gap-4 w-full md:w-[320px] lg:w-[420px]">
           {/* Logo */}
@@ -56,31 +56,36 @@ export default function Footer() {
           </div>
         </div>
         {/* Right Columns: Policies, Menu, Contact */}
-        <div className="flex flex-col sm:flex-row gap-8 md:gap-16 w-full justify-between">
-          {/* Policies */}
-          <div>
-            <h4 className="text-lg text-black font-semibold mb-4">Policies</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {SITE_CONFIG.footer.policies.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href} className="hover:underline focus:underline transition-colors">{item.label}</a>
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-col md:flex-row  gap-8 md:gap-16 w-full justify-between">
+          {/* Policies & Menu Row for mobile */}
+          <div className="flex-2 flex-row gap-2 w-full sm:w-auto">
+          <div className="flex  flex-row gap-2 w-full sm:w-auto">
+            {/* Policies */}
+            <div className="flex-1/2 flex-row ">
+              <h4 className="text-lg text-black font-semibold mb-4">Policies</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                {SITE_CONFIG.footer.policies.map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="hover:underline focus:underline transition-colors">{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Menu */}
+            <div className="flex-1/2 ">
+              <h4 className="text-lg text-black font-semibold mb-4">Menu</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                {SITE_CONFIG.footer.menu.map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="hover:underline focus:underline transition-colors">{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          {/* Menu */}
-          <div>
-            <h4 className="text-lg text-black font-semibold mb-4">Menu</h4>
-            <ul className="space-y-2 text-sm text-gray-700">
-              {SITE_CONFIG.footer.menu.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href} className="hover:underline focus:underline transition-colors">{item.label}</a>
-                </li>
-              ))}
-            </ul>
           </div>
           {/* Contact */}
-          <div>
+          <div className='flex-1 '>
             <h4 className="text-lg text-black font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>Email: <a href={`mailto:${SITE_CONFIG.footer.email}`} className="hover:underline">{SITE_CONFIG.footer.email}</a></li>

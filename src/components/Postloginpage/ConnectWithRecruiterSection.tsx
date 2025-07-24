@@ -24,18 +24,28 @@ export default function ConnectWithRecruiterSection() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(row1Ref.current, {
-        x: '-50%',
+        x: '-10%',
         ease: 'linear',
         duration: 20,
         repeat: -1,
       });
 
-      gsap.to(row2Ref.current, {
-        x: '50%',
-        ease: 'linear',
-        duration: 20,
-        repeat: -1,
-      });
+      // To create a seamless infinite marquee effect (so cards always appear from the left as they move right),
+      // animate from -100% to 0% and reset, duplicating the row's content in the JSX for a smooth loop.
+      // Here, we animate the row to the right and reset to the start for a marquee effect.
+      if (row2Ref.current) {
+        const row = row2Ref.current;
+        const animate = () => {
+          gsap.set(row, { x: '-40%' });
+          gsap.to(row, {
+            x: '0%',
+            ease: 'linear',
+            duration: 40,
+            onComplete: animate,
+          });
+        };
+        animate();
+      }
     });
 
     return () => ctx.revert();
