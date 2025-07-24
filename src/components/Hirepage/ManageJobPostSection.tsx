@@ -1,4 +1,5 @@
 'use client';
+import { FiShare2 } from "react-icons/fi";
 
 import React, { useRef } from "react";
 
@@ -108,7 +109,7 @@ const ManageJobPostSection = () => {
           <input
             type="text"
             placeholder="Search posts..."
-            className="w-[24.875rem] h-[2.375rem] rounded-[0.5rem] border border-[#E5E7EB] px-4 text-[0.875rem] focus:outline-none focus:ring-2 focus:ring-indigo-200 bg-white" // 398px = 24.875rem, 38px = 2.375rem
+            className="w-[24.875rem] h-[2.375rem] rounded-[0.5rem] border border-grey-100 px-4 text-[0.875rem] focus:outline-none focus:ring-2 focus:ring-indigo-200 bg-white" // 398px = 24.875rem, 38px = 2.375rem
           />
         </div>
         {/* Cards Row */}
@@ -138,11 +139,11 @@ const ManageJobPostSection = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   {/* Share icon */}
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#F3F4F6]">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M13.5 9.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-9-3a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Zm9 0a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Zm-9 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm4.5-1.5a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" stroke="#7C3AED" strokeWidth="1.5"/></svg>
-                  </span>
+                  <span className="w-6 h-6 cursor-pointer flex items-center justify-center rounded-full bg-[#F3F4F6] text-[#7C3AED]">
+    <FiShare2 size={16} />
+  </span>
                   {/* Three dot icon */}
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#F3F4F6]">
+                  <span className="w-6 h-6 flex cursor-pointer items-center justify-center rounded-full bg-[#F3F4F6]">
                     <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><circle cx="3" cy="9" r="1.5" fill="#8B8B8B"/><circle cx="9" cy="9" r="1.5" fill="#8B8B8B"/><circle cx="15" cy="9" r="1.5" fill="#8B8B8B"/></svg>
                   </span>
                 </div>

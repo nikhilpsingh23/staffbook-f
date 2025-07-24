@@ -20,9 +20,9 @@ export default function Page() {
                 <PostJobSection/>
                 <ManageJobPostSection/>
                 <MapFilterSection/>
-                <div className="text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B]">Ready To Join Candidates</div>
+                <div className="text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B] text-center sm:text-left">Ready To Join Candidates</div>
                   <ResumeDownloadSection/>
-                  <div className="text-[2rem] mt-6 font-Montserrat font-semibold text-[#18192B]">Candidates according to your requirements</div>
+                  <div className="text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B] text-center sm:text-left">Ready To Join Candidates</div>
                   <ResumeDownloadSection/>
                 </>
               }

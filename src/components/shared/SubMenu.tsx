@@ -5,7 +5,7 @@ import { menuItems, inputLabels } from '../../data/subMenu';
 
 export default function JobSearchBar() {
   return (
-    <section className="w-full mt-4 bg-gray-50 py-6 md:py-24 relative">
+    <section className="w-full mt-4 bg-[#F7F7F8] py-6 md:py-24 relative">
       <div className="w-full  max-w-[95%] mx-auto relative px-2 md:px-0">
         {/* Floating Menu */}
 
@@ -15,7 +15,7 @@ export default function JobSearchBar() {
             // console.log(Icon,"------");
             return (
               <div key={index} className="flex flex-col items-center text-white text-xs md:text-sm min-w-[50px]">
-                {Icon ? <Icon  size={22} className='text-white' /> : null}
+                {Icon ? <Icon  size={22} className=' cursor-pointer text-white' /> : null}
                 <span className="mt-1 whitespace-nowrap">{item.label}</span>
               </div>
             );
