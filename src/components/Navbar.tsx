@@ -8,7 +8,7 @@ import GradientButton from './shared/GradientButton';
 import { useAuth } from '../context/AuthContext';
 import { FiBell, FiMessageSquare } from 'react-icons/fi';
 import ProfileAvatar from './shared/ProfileAvatar';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 
@@ -18,6 +18,7 @@ const Navbar = () => {
   const navLinks = SITE_CONFIG.navbar.navLinks;
   const signUpText = SITE_CONFIG.navbar.signUp;
   const { user } = useAuth();
+  const router = useRouter();
 
 
   return (
@@ -94,7 +95,9 @@ const Navbar = () => {
           {user ? (
             <>
               <NavbarIconButton />
+             
             <ProfileAvatar name={user.name} className="mt-4" size={80} />
+              
             </>
           ) : (
             <Link key={"signup"}

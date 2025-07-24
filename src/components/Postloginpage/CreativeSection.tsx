@@ -15,7 +15,7 @@ const people = [
 
 export default function CreativeSection() {
   return (
-    <section className="w-full py-10 bg-white">
+    <section className="w-full py-10 bg-gray-50">
       {/* Header */}
       <div className="w-[1235px] max-w-full mx-auto flex justify-between items-center px-4">
         <h2 className="text-[32px] text-Montserrat font-semibold text-gray-900">

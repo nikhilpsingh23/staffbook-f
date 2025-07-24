@@ -59,6 +59,36 @@ export const SITE_CONFIG = {
     title: 'Featured Jobs',
     seeAll: 'See All',
   },
+  profileHeader: {
+    preferredRole: 'Preferred Role',
+    preferredSalary: 'Preferred Salary',
+    preferredLocation: 'Preferred Location',
+    preferredShift: 'Preferred Shift',
+    jobType: 'Job Type',
+    workStatus: 'Work Status',
+    progressLabel: 'Profile Completion',
+  },
+  profileSummary: {
+    section: 'Profile Summary',
+  },
+  personalInfo: {
+    section: 'Personal Information',
+    personal: 'Personal',
+    dob: 'Date of Birth',
+    category: 'Cateogry',
+    workPermit: 'Work Permit',
+    address: 'Address',
+    addMore: 'Add more details',
+  },
+  resume: {
+    section: 'Resume',
+    required: '*',
+    upload: 'Upload Resume',
+    helper: 'Upload Resume to auto fetch the details to automatically fill your profile',
+  },
+  skills: {
+    section: 'Skills',
+  },
   signup: {
     heading: 'Create your profile',
     subheading: "+Join india's no. 1 job portal",
@@ -85,6 +115,30 @@ export const SITE_CONFIG = {
     resumeHelper: 'Maximum size of PDF 2mb',
     jobUpdatesLabel: 'Send job updates me through mail, whatsapp',
     registerButton: 'Register now',
+  },
+  basicDetails: {
+    section: 'Basic Details',
+    totalExperience: 'Total Experience',
+    location: 'Location',
+    currentSalary: 'Current Salary',
+    noticePeriod: 'Notice Period',
+    socialMedia: 'Social Media Links',
+    personalEmail: 'Personal Email ID',
+    workEmail: 'Work Email ID',
+    personalContact: 'Personal Contact',
+    workNoticePeriod: 'Notice Period',
+  },
+  experienceSection: {
+    section: 'Experience',
+  },
+  educationSection: {
+    section: 'Education',
+  },
+  projectsSection: {
+    section: 'Projects',
+  },
+  certificationsSection: {
+    section: 'Certifications',
   },
 };
 export const LOGGED_IN_LINKS = [
