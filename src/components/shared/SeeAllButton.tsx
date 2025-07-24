@@ -8,7 +8,7 @@ interface SeeAllButtonProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
 
 const SeeAllButton: React.FC<SeeAllButtonProps> = ({ children, className = '', ...props }) => (
   <div
-    className={`flex items-center gap-4 md:gap-6 text-xl md:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294] hover:underline transition ${className}`}
+    className={`flex items-center gap-2 md:gap-6 text-xl md:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294] hover:underline transition ${className}`}
     {...props}
   >
     <span>{children}</span>
