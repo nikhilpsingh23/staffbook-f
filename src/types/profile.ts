@@ -31,19 +31,30 @@ export interface Experience {
   role: string;
   company: string;
   location: string;
-  duration: string;
+  employmentType: string;
+  isCurrent: boolean;
+  joiningYear: string;
+  joiningMonth: string;
+  leavingYear?: string;
+  leavingMonth?: string;
   description: string;
   achievements: string[];
   skills: string[];
 } 
 
 export interface Education {
-  degree: string;
-  specialization: string;
+  year: string;
   institution: string;
+  course: string;
+  specialization: string;
+  courseType: string;
+  startYear: string;
+  endYear: string;
+  gradingSystem: string;
+  degree: string;
+  cgpa: string;
   location: string;
   duration: string;
-  cgpa: string;
   description: string;
   achievements: string[];
   skills: string[];
@@ -51,25 +62,37 @@ export interface Education {
 
 export interface Project {
   name: string;
-  duration: string;
   role: string;
+  issueYear: string;
+  issueMonth: string;
+  expiryYear?: string;
+  expiryMonth?: string;
   description: string;
   achievements: string[];
   skills: string[];
   softwares: string[];
   url: string;
+  duration: string;
 } 
 
 export interface Certification {
   name: string;
+  role: string;
+  startYear: string;
+  startMonth: string;
+  endYear: string;
+  endMonth: string;
+  description: string;
+  skills: string[];
+  credentialId: string;
+  url: string;
   institution: string;
   location: string;
   issued: string;
   expires: string;
-  credentialId: string;
-  description: string;
-  url: string;
-  skills: string[];
+  credentialIdOld: string;
+  descriptionOld: string;
+  urlOld: string;
 } 
 
 export interface ProfileCompletion {
@@ -77,4 +100,10 @@ export interface ProfileCompletion {
   skill: string;
   percent: number;
   helper: string;
+} 
+
+export interface ProfilePerformanceStat {
+  label: string;
+  value: number;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
 } 
