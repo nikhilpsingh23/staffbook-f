@@ -18,7 +18,7 @@ export const featuredJobs: FeaturedJob[] = [
     userImg: '/homePage/p.png',
     time: '2h ago',
     company: 'Google',
-    companyLogo: '/homePage/google.png',
+    companyLogo: '/homePage/job-photo.png',
     companyBg: 'bg-white',
     role: 'UI/UX Designer',
     workType: 'Work from office',
