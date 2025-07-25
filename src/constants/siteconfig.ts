@@ -148,3 +148,5 @@ export const LOGGED_IN_LINKS = [
   { label: 'My Connections', href: '/connections' },
   { label: 'Services', href: '/services' },
 ];
+
+export const PROFILE_PERFORMANCE_TITLE = 'Profile Performance';
