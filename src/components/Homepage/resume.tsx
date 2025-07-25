@@ -38,7 +38,7 @@ export default function ResumeSection() {
       <div className="absolute top-0 left-0 w-[220px] h-[120px] rounded-full blur-[90px] bg-sky-200 opacity-70 blur-dot z-0" />
       <div className="relative z-10 w-full max-w-7xl px-4 mx-auto">
         {/* Title */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-5xl text-black font-medium text-center mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294]">
             {SITE_CONFIG.homepage.resumeTitleGradient}
           </span>{' '}

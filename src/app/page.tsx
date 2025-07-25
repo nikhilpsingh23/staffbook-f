@@ -1,3 +1,5 @@
+
+import Image from "next/image";
 import Hero from "../components/Homepage/HeroSection";
 import CategoriesWithNews from "../components/Homepage/merge2and3";
 import ExpertsSection from "../components/Homepage/connection";

@@ -14,7 +14,7 @@ const CategoriesWithNews = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-[32px] sm:text-[40px] md:text-[48px] font-semibold text-[#101022] leading-tight">
+          <h1 className="text-[32px] sm:text-[40px] md:text-[48px] font-medium text-[#101022] leading-tight">
             {SITE_CONFIG.homepage.heroTitle.split('with')[0]}
             <span className="bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-transparent bg-clip-text">Roles</span>
           </h1>
