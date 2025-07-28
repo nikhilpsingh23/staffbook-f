@@ -10,8 +10,9 @@ import PopularRolesSection from '../../components/Postloginpage/PopularRolesSect
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen w-full bg-[#f7f7fa]">
+    <main className="min-h-screen pt-16 w-full bg-[#f7f7fa]">
       {/* <Navbar/> */}
+
       <JobSearchBar/>
       <FeaturedJobsSection/>
       <PopularRolesSection />

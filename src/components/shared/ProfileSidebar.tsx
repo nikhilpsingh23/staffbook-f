@@ -23,13 +23,14 @@ const cards = [
   { icon: <FiSearch size={20} />, title: "See who searched you", count: 20 },
   { icon: <FiPhone size={20} />, title: "Contact viewed", count: 20 },
   { icon: <FiBookmark size={20} />, title: "Profile bookmarked", count: 20 },
+ 
 ];
 
 export default function ProfileSidebar() {
   return (
-    <aside className="w-[17.0625rem] h-auto flex flex-col items-center pt-[1.5rem] mt-[3.75rem]">
-      {/* Profile Section */}
-      <div className="flex flex-col items-center mb-[1.5rem]">
+    <aside className="w-[20.0625rem] fixed h-full md:h-[150vh] flex flex-col items-center pt-[1.5rem] mt-[3.75rem]">
+      {/* Profile Section - Fixed at top */}
+      <div className="flex flex-col items-center mb-[1.5rem] flex-shrink-0">
         <div className="relative flex flex-col items-center">
           {/* Gradient Border Circle */}
           <div className="w-[6rem] h-[6rem] rounded-full bg-gradient-to-tr from-[#5B5BE7] via-[#B14BE4] to-[#5B5BE7] p-[0.1875rem] flex items-center justify-center">
@@ -64,26 +65,28 @@ export default function ProfileSidebar() {
         </button>
       </div>
 
-      {/* Cards Section */}
-      <div className="flex flex-col font-Montserrat gap-[0.75rem] w-full items-center">
-        {cards.map((card) => (
-          <div
-            key={card.title}
-            className="w-[14.8125rem] h-[4.5625rem] bg-[#F3EFFF] rounded-[0.75rem] flex flex-col justify-center px-[1rem] py-[0.5rem]"
-          >
-            <div className="flex items-center gap-[0.5rem]">
-              <span className="text-[#5B5BE7]">{card.icon}</span>
-              <span className="text-[0.875rem] font-medium text-[#222]">{card.title}</span>
+      {/* Cards Section - Scrollable */}
+      <div className="flex-1  h-full overflow-y-auto w-full px-4 pb-16">
+        <div className="flex flex-col font-Montserrat gap-[0.75rem] w-full items-center">
+          {cards.map((card,index) => (
+            <div
+              key={index}
+              className="w-[14.8125rem] h-[4.5625rem] bg-[#F3EFFF] rounded-[0.75rem] flex flex-col justify-center px-[1rem] py-[0.5rem]"
+            >
+              <div className="flex items-center gap-[0.5rem]">
+                <span className="text-[#5B5BE7]">{card.icon}</span>
+                <span className="text-[0.875rem] font-medium text-[#222]">{card.title}</span>
+              </div>
+              <div className="flex items-center mt-[0.25rem] gap-[0.25rem]">
+                <span className="text-[1.25rem] font-bold text-[#8B2AE2]">{card.count}</span>
+                <span className="w-[0.5rem] h-[0.5rem] bg-[#FF4B55] rounded-full inline-block ml-[0.25rem]"></span>
+                <span className="text-[#8B2AE2] text-[1.125rem] font-bold ml-auto">
+                  &gt;
+                </span>
+              </div>
             </div>
-            <div className="flex items-center mt-[0.25rem] gap-[0.25rem]">
-              <span className="text-[1.25rem] font-bold text-[#8B2AE2]">{card.count}</span>
-              <span className="w-[0.5rem] h-[0.5rem] bg-[#FF4B55] rounded-full inline-block ml-[0.25rem]"></span>
-              <span className="text-[#8B2AE2] text-[1.125rem] font-bold ml-auto">
-                &gt;
-              </span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </aside>
   );
