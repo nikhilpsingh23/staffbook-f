@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
+import Services from '../../components/Services/Services';
 
-export default function Page() {
-  return (
-    <div className='flex min-h-screen bg-white'
-    >page</div>
-  )
+export default function ServicesPage() {
+  return <Services />;
 }
 
