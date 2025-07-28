@@ -22,7 +22,7 @@ const CategoriesWithNews = () => {
         {/* Category Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5 mb-24 max-w-[1371px] mx-auto">
           {categories.map((category, index) => {
-            const Icon = ((LucideIcons as unknown) as Record<string, React.ElementType>)[category.icon] || ((LucideIcons as unknown) as Record<string, React.ElementType>)['Circle'];
+            const Icon = category.icon;
             return (
               <div
                 key={index}

@@ -58,7 +58,7 @@ const miniFeaturedJobs = [
   },
 ];
 
-export default function MiniFeaturedJobCards({width=true}:{width:boolean}) {
+export default function MiniFeaturedJobCards({width=true}:{width?:boolean}) {
   return (
     <section className="w-full bg-[#f7f7fa] py-8 md:py-12">
       <div className={`w-full mx-auto px-3 md:px-6 ${width ? 'max-w-full' : 'max-w-6xl'}`}>
