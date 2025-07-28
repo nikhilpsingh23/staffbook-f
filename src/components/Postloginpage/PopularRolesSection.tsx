@@ -30,7 +30,7 @@ const PopularRolesSection: React.FC = () => {
         <div className="flex flex-col gap-4 items-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
             {firstRow.map((cat) => {
-              const Icon = iconMap[cat.icon] || iconMap['Briefcase'];
+              const Icon = cat.icon;
               return (
                 <CategoryCard
                   key={cat.title}
@@ -43,7 +43,7 @@ const PopularRolesSection: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
             {secondRow.map((cat) => {
-              const Icon = iconMap[cat.icon] || iconMap['Briefcase'];
+              const Icon = cat.icon;
               return (
                 <CategoryCard
                   key={cat.title}

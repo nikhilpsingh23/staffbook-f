@@ -1,5 +1,5 @@
 export interface Category {
   title: string;
   jobs: string;
-  icon: string;
+  icon: React.ElementType;
 } 

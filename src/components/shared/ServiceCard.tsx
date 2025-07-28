@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { ServicePlan } from '../../types/service';
 
-interface ServiceCardProps extends ServicePlan {}
+// interface ServiceCardProps extends ServicePlan {}
 
-export default function ServiceCard({ title, features, price, image, popular = false }: ServiceCardProps) {
+export default function ServiceCard({ title, features, price, image, popular = false }: ServicePlan) {
   return (
     <div className="relative bg-white rounded-[20px] shadow-lg border border-gray-200 p-6 flex flex-col h-full">
       {/* Popular Badge */}

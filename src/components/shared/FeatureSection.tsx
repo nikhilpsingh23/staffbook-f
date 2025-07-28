@@ -13,7 +13,7 @@ import SeeAllButton from './SeeAllButton';
 import { featuredJobs } from '../../data/featuredJobs';
 import { SITE_CONFIG } from '../../constants/siteconfig';
 
-export default function FeaturedJobsSection({width=true}:{width:boolean}) {
+export default function FeaturedJobsSection({width=true}:{width?:boolean}) {
   return (
     <section className="w-full bg-[#f7f7fa] py-6 md:py-10">
       <div className={`w-full mx-auto px-3 md:px-6 ${width ? 'max-w-full' : 'max-w-6xl'}`}>
