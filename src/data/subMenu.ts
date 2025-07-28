@@ -2,12 +2,12 @@ import { Briefcase, Home, MessageSquare, Search, User, Save, Bell, Monitor } fro
 
 
 export const menuItems = [
-  { icon: User, label: 'Hire' },
-  { icon: Briefcase, label: 'Get Hired' },
-  { icon: MessageSquare, label: 'Live Chat' },
-  { icon: Save, label: 'Saved Jobs' },
-  { icon: Bell, label: 'Subscribe' },
-  { icon: Monitor, label: 'Ads' },
+  { icon: User, label: 'Hire', href: '/hire' },
+  { icon: Briefcase, label: 'Get Hired', href: '/gethire' },
+  { icon: MessageSquare, label: 'Live Chat', href: '/livechat' },
+  { icon: Save, label: 'Saved Jobs', href: '/saved-jobs' },
+  { icon: Bell, label: 'Subscribe', href: '/subscribe' },
+  { icon: Monitor, label: 'Ads', href: '/ads' },
 ];
 
 export const inputLabels = [

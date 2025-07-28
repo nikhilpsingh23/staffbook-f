@@ -1,12 +1,14 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { menuItems, inputLabels } from '../../data/subMenu';
 
 
 export default function JobSearchBar() {
+  const router = useRouter();
   return (
-    <section className="w-full mt-12 bg-gray-50 py-10 md:py-24 relative">
-      <div className="w-full  max-w-[95%] mx-auto relative px-2 md:px-0">
+    <section className="w-full  bg-[#F7F7F8] py-6 md:py-2 relative">
+      <div className="w-full max-w-[95%] mx-auto relative px-2 md:px-0">
         {/* Floating Menu */}
 
         <div className="absolute top-[-46px] left-1/2 -translate-x-1/2 w-full max-w-[95%] h-[93px] bg-gradient-to-r from-[#5b5be7] to-[#b14be4] rounded-full shadow-lg flex items-center justify-around px-2 md:px-8 z-10 overflow-x-auto gap-2 md:gap-0">
@@ -14,8 +16,8 @@ export default function JobSearchBar() {
              const Icon = item.icon;
             // console.log(Icon,"------");
             return (
-              <div key={index} className="flex flex-col items-center text-white text-xs md:text-sm min-w-[50px]">
-                {Icon ? <Icon  size={22} className='text-white' /> : null}
+              <div key={index} onClick={() => router.push(item.href)} className="flex flex-col items-center text-white text-xs md:text-sm min-w-[50px]">
+                {Icon ? <Icon  size={22} className=' cursor-pointer text-white' /> : null}
                 <span className="mt-1 whitespace-nowrap">{item.label}</span>
               </div>
             );

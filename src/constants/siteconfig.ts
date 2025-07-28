@@ -19,6 +19,153 @@ export const SITE_CONFIG = {
     newsDescription: 'Stay updated with the latest trends, updates, and news shared by industry experts.',
     connectionTitle: 'Nurture your professional relationships with industry experts',
   },
+  services: {
+    recruiterPlans: {
+      title: 'Unlock Premium Access for Recruiters',
+      plans: [
+        {
+          title: 'Get free of cost access to services to hire the right talent',
+          features: [
+            'Unlimited Job posting',
+            'Live chat with job seekers',
+            'Post your hiring requirements on social media',
+            'Send unlimited connection requests'
+          ],
+          price: 'Free',
+          image: '/homePage/professional.png',
+          popular: true
+        },
+        {
+          title: 'Hiring made easy',
+          features: [
+            'View & Share contact details 15 applicants',
+            'Video conferencing with 15 job applicants',
+            'Resume Downloads of all job applicants'
+          ],
+          price: '999/ month',
+          image: '/homePage/premium.png',
+          popular: true
+        },
+        {
+          title: 'Bulk Hiring Plan',
+          features: [
+            '100 CV views per requirement',
+            'Up to 500 search results',
+            'Candidates active in last 6 months',
+            '10+ advanced filters',
+            'Single user access'
+          ],
+          price: '999/ month',
+          image: '/homePage/premium (2).png',
+          popular: true
+        }
+      ]
+    },
+    jobSeekerPlans: {
+      title: 'Unlock Premium Access for Job seekers',
+      plans: [
+        {
+          title: 'Get free of cost access to services to boost your career',
+          features: [
+            'Apply for unlimited jobs',
+            'Live chat with recruiters',
+            'Post on social media',
+            'Send unlimited connection requests',
+            'Post one job'
+          ],
+          price: 'Free',
+          image: '/homePage/job-photo.png',
+          popular: true
+        },
+        {
+          title: 'Increase your profile visibility & Be a priority applicant',
+          features: [
+            'Get the Listing of jobs near you',
+            'Profile visibility on top'
+          ],
+          price: 'Rs. 300 for 1 month',
+          image: '/homePage/chat1.png',
+          popular: true
+        },
+        {
+          title: 'Get access to jobs near you',
+          features: [
+            'Get the Listing of jobs near you'
+          ],
+          price: 'Rs. 250 for 1 month',
+          image: '/homePage/ats.png',
+          popular: true
+        }
+      ]
+    },
+    additionalPlans: {
+      plans: [
+        {
+          title: 'Stand out as an Early Applicant with instant access to jobs.',
+          features: [
+            'Get the Listing of jobs near you',
+            'Profile visibility on top',
+            'Share & view contact details of 25 recruiters',
+            'Receive jobs within 24 hours of them being posted on Staff Book'
+          ],
+          price: 'Rs. 500 for 1 month',
+          image: '/homePage/chat2.png',
+          popular: true
+        },
+        {
+          title: 'Live video conferencing with recruiters',
+          features: [
+            'Get the Listing of jobs near you',
+            'Profile visibility on top',
+            'Share & view contact details of 25 recruiters',
+            'Receive jobs within 24 hours of them being posted on Staff Book',
+            'Get the access of scheduled video conferencing with 10 recruiters'
+          ],
+          price: 'Rs. 750 for 1 month',
+          image: '/homePage/chat3.png',
+          popular: true
+        },
+        {
+          title: 'Create your ATS Friendly Resume',
+          features: [
+            'Get the Listing of jobs near you',
+            'Profile visibility on top',
+            'Share & view contact details of 25 recruiters',
+            'Receive jobs within 24 hours of them being posted on Staff Book',
+            'Get the access of scheduled video conferencing with 10 recruiters',
+            'Get the access of live video conferencing with 10 recruiters',
+            'ATS Friendly Resume'
+          ],
+          price: 'Rs. 900 for 1 month',
+          image: '/homePage/resume.png',
+          popular: true
+        }
+      ]
+    },
+    resumeWriting: {
+      title: 'Need help with Resume Writing?',
+      subtitle: 'Standout from the crowd with our professionally written Resume by expert.',
+      features: [
+        'Feature 1',
+        'Feature 1',
+        'Feature 1',
+        'Feature 1'
+      ],
+      price: 'Rs. 300 only',
+      image: '/images/resume_accepted.svg'
+    },
+    contactUs: {
+      title: 'Contact Us',
+      form: {
+        name: 'Name',
+        email: 'Email ID',
+        phone: 'Phone no.',
+        query: 'Your Query',
+        button: 'Call Me Back'
+      },
+      image: '/homePage/chat1.png'
+    }
+  },
   footer: {
     tagline: 'Nearby Jobs, Live Chat with Recruiters & Networking',
     policies: [
