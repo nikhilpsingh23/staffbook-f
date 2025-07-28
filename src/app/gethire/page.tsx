@@ -13,16 +13,25 @@ export default function Page() {
     <>
       <ProfileLayout >
         <SearchButton />
-        {/* <FeaturedJobsSection /> */}
-        {/* <MiniFeaturedJobCards /> */}
+        <div className="w-full">
+          <FeaturedJobsSection width={false} />
+        </div>
+        <div className="w-full">
+          <MiniFeaturedJobCards width={false} />
+        </div>
         <AdBannerSection />
         <MapFilterSection />
         <div className="text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B] text-center sm:text-left">Recruiters Online</div>
         <RecruiterConnectSection />
         <div className="text-[1.25rem] sm:text-[1.5rem] md:text-[2rem] mb-3 font-Montserrat font-semibold text-[#18192B] text-center sm:text-left">Recruiters according to your requirements</div>
         <RecruiterConnectSection />
-        {/* <FeaturedJobsSection /> */}
-        {/* <MiniFeaturedJobCards /> */}
+
+        <div className="w-full">
+          <FeaturedJobsSection width={false} />
+        </div>
+        <div className="w-full">
+          <MiniFeaturedJobCards width={false} />
+        </div>
         <TwoBannerSection />
       </ProfileLayout>
     </>
