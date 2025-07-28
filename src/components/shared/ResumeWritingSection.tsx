@@ -24,7 +24,7 @@ export default function ResumeWritingSection() {
               
               {/* Features */}
               <div className="space-y-3">
-                <h3 className="font-semibold text-gray-900">What you'll get:</h3>
+                <h3 className="font-semibold text-gray-900">What you ll get:</h3>
                 <div className="space-y-2">
                   {resumeWriting.features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">

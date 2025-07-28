@@ -17,7 +17,7 @@ const Categories = () => {
       {/* First Row - 4 Cards */}
       <div className="max-w-[1371px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5 mb-8">
         {categories.slice(0, 4).map((category, index) => {
-          const Icon = require('lucide-react')[category.icon];
+          const Icon = category.icon;
           return (
             <div
               key={index}
@@ -38,7 +38,7 @@ const Categories = () => {
       {/* Second Row - 4 Cards */}
       <div className="max-w-[1371px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5">
         {categories.slice(4).map((category, index) => {
-          const Icon = require('lucide-react')[category.icon];
+          const Icon = category.icon;
           return (
             <div
               key={index}
