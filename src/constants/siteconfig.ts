@@ -47,7 +47,7 @@ export const SITE_CONFIG = {
     navLinks: [
       { label: 'Jobs', href: '/jobs' },
       { label: 'Networking', href: '/networking' },
-      { label: 'My Connections', href: '/connections' },
+      { label: 'My Connections', href: '/myconnection' },
       { label: 'Services', href: '/services' },
     ],
     signUp: 'Sign up',

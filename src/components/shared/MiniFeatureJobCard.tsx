@@ -58,14 +58,14 @@ const miniFeaturedJobs = [
   },
 ];
 
-export default function MiniFeaturedJobCards() {
+export default function MiniFeaturedJobCards({title}: {title: string}) {
   return (
     <section className="w-full bg-[#f7f7fa] py-8 md:py-12">
       <div className="w-full max-w-[95%] px-2 md:px-6 mx-auto">
         {/* Header */}
         <div className="flex flex-row justify-between items-center mb-6">
           <h2 className="text-2xl md:text-[32px] font-bold text-gray-900">
-            Recently Posted Jobs
+            {title}
           </h2>
           <SeeAllButton>See All</SeeAllButton>
         </div>
