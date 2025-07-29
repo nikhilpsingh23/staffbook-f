@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import ProfileLayout from '../../components/shared/ProfileLayout';
+import NetworkingLayout from '../../components/Networking/NetworkingLayout';
 
 export default function Page() {
   return (
-    <div className='flex min-h-screen bg-white'
-    >page</div>
-  )
+    <ProfileLayout showSidebar={true} showStories={true} showJobSearchBar={false}>
+      <NetworkingLayout />
+    </ProfileLayout>
+  );
 }
 

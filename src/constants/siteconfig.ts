@@ -218,6 +218,52 @@ export const SITE_CONFIG = {
   profileSummary: {
     section: 'Profile Summary',
   },
+  savedJobs: {
+    title: 'Saved Jobs',
+    subtitle: 'Your saved job opportunities',
+    emptyState: {
+      title: 'No saved jobs yet',
+      subtitle: 'Start saving jobs you\'re interested in to see them here',
+      buttonText: 'Browse Jobs',
+    },
+  },
+  networking: {
+    title: 'Networking',
+    subtitle: 'Connect with professionals',
+    writePost: 'Write a post',
+    postTypes: {
+      blog: 'Write Blog',
+      image: 'Upload Image',
+      video: 'Upload Video',
+      reel: 'Upload Reel',
+    },
+    reels: {
+      title: 'Reels',
+      refresh: 'Refresh',
+      createReel: 'Create Reel',
+      uploadVideo: 'Upload Video',
+      recordVideo: 'Record Video',
+      addCaption: 'Add caption...',
+      addHashtags: 'Add hashtags...',
+      publish: 'Publish',
+      cancel: 'Cancel',
+    },
+    suggestedForYou: 'Suggested for you',
+    connect: 'Connect',
+    viewProfile: 'View Profile',
+    postActions: {
+      editPost: 'Edit post',
+      sharePost: 'Share post',
+      muteNotifications: 'Mute Notifications',
+      insights: 'Insights',
+      deletePost: 'Delete Post',
+    },
+    recruitersOnline: {
+      title: 'Recruiters Online',
+      viewAll: 'View all',
+      chat: 'Chat',
+    },
+  },
   personalInfo: {
     section: 'Personal Information',
     personal: 'Personal',
