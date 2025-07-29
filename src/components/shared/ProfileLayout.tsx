@@ -11,12 +11,14 @@ interface ProfileLayoutProps {
   children: React.ReactNode;
   showSidebar?: boolean;
   showStories?: boolean;
+  showJobSearchBar?: boolean;
 }
 
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({
   children,
   showSidebar = true,
-  showStories = true
+  showStories = true,
+  showJobSearchBar = true
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -66,7 +68,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
         {showSidebar && (
           <div className={`
             ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
-            lg:translate-x-0 lg:relative lg:w-80 xl:w-96 flex-shrink-0
+            lg:translate-x-0 lg:relative lg:w-80  flex-shrink-0
             fixed lg:static top-0 left-0 h-full lg:z-0 z-50
             w-80 bg-white shadow-lg lg:shadow-none
             transition-transform duration-300 ease-in-out
@@ -83,12 +85,12 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
               <StorySection />
             </div>
           )}
-          <div className='w-full lg:max-w-[91%]'>
+          {showJobSearchBar && <div className='w-full lg:max-w-[95%]'>
             <JobSearchBar />
-          </div>
+          </div>}
 
           {/* Page Content */}
-          <main className="flex-1 w-full lg:max-w-[91%] p-4 lg:p-6">
+          <main className="flex-1 w-full lg:max-w-[95%] p-4 lg:p-6">
             {children}
           </main>
         </div>
