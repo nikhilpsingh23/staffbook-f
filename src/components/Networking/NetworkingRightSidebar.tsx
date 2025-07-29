@@ -38,7 +38,7 @@ const NetworkingRightSidebar: React.FC = () => {
     </>
   );
 };
-const RecruiterCard: React.FC<{ recruiter: any }> = ({ recruiter }) => {
+const RecruiterCard: React.FC<{ recruiter: Recruiter }> = ({ recruiter }) => {
   return (
     <div className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors">
       {/* Profile Picture with Online Status */}
@@ -74,8 +74,16 @@ const RecruiterCard: React.FC<{ recruiter: any }> = ({ recruiter }) => {
   );
 };
 
+export interface Recruiter {
+  id: number;
+  name: string;
+  title: string;
+  avatar: string;
+  description: string;
+}
 const RecruitersOnline: React.FC = () => {
-  const recruiters = [
+
+  const recruiters: Recruiter[] = [
     {
       id: 1,
       name: 'John Doee',

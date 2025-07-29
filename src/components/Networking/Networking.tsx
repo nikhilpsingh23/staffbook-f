@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { stories, posts, reels, suggestedConnections, userStats } from '../../data/networking';
+import { stories, posts, reels, suggestedConnections, userStats, Post, SuggestedConnection, Reel } from '../../data/networking';
 import { SITE_CONFIG } from '../../constants/siteconfig';
 import { FiPlus, FiHeart, FiMessageCircle, FiShare2, FiSend, FiMoreVertical, FiPlay, FiRefreshCw, FiVideo, FiCamera, FiX, FiEdit3, FiImage, FiVideo as FiVideoIcon, FiEdit, FiShare, FiBell, FiTrendingUp, FiTrash2 } from 'react-icons/fi';
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import NetworkingRightSidebar from './NetworkingRightSidebar';
 
 
 
-const PostCard: React.FC<{ post: any }> = ({ post }) => {
+const PostCard: React.FC<{ post: Post }> = ({ post }) => {
   const [showActionsModal, setShowActionsModal] = React.useState(false);
   const buttonRef = React.useRef<HTMLButtonElement>(null);
 
@@ -113,7 +113,7 @@ const PostCard: React.FC<{ post: any }> = ({ post }) => {
   );
 };
 
-const ReelCard: React.FC<{ reel: any }> = ({ reel }) => {
+const ReelCard: React.FC<{ reel: Reel }> = ({ reel }) => {
   return (
     <div className="flex-shrink-0 w-48 sm:w-56">
       <div className="relative">
@@ -148,7 +148,7 @@ const ReelCard: React.FC<{ reel: any }> = ({ reel }) => {
   );
 };
 
-const SuggestedConnectionCard: React.FC<{ connection: any }> = ({ connection }) => {
+const SuggestedConnectionCard: React.FC<{ connection: SuggestedConnection }> = ({ connection }) => {
   return (
     <div className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors">
       <Image

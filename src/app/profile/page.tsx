@@ -16,8 +16,8 @@ import ProfilePerformanceStats from '@/components/profile/ProfilePerformanceStat
 export default function Page() {
   return (
     <div className="flex flex-col md:flex-row mt-16 gap-6 min-h-screen bg-[#f7f7fa] py-6 px-2 md:px-6">
-      <div className='flex-1'>
-3
+      <div className='flex flex-col '>
+
       <ProfileHeader />
       {/* <ProfilePerformance /> */}
           <ProfilePerformanceStats />
