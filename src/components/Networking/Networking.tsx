@@ -14,7 +14,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white rounded-lg border border-gray-200 p-4 mb-4">
+      <div className="bg-white md:rounded-lg border border-gray-200 p-4 mb-4">
         {/* Post Header */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
@@ -358,16 +358,16 @@ const PostActionsModal: React.FC<{ isOpen: boolean; onClose: () => void; postId:
 
 const Networking: React.FC = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="w-full max-w-full mx-auto  px-0 md:px-4">
       <div className="flex gap-6">
         {/* Main Content */}
         <div className="flex flex-col  w-full">
         
 
           {/* Create Post Section */}
-          <div className="bg-white rounded-lg border border-gray-200 p-4 mb-6">
+          {/* <div className="bg-white md:rounded-lg border border-gray-200 p-4 mb-6">
             <div className="flex items-start gap-3">
-              {/* Profile Picture with Gradient Border */}
+             
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-400 p-0.5">
                   <Image
@@ -405,7 +405,7 @@ const Networking: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
       
           {/* Posts Feed */}
