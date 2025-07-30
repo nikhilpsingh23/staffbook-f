@@ -30,7 +30,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
     <div className="min-h-screen mt-8 bg-gray-50">
       {/* Mobile Sidebar Toggle Button */}
       {showSidebar && (
-        <div className="lg:hidden fixed top-18 left-2 z-50">
+        <div className="hidden fixed top-18 left-2 z-50">
           <button
             onClick={toggleSidebar}
             className=" bg-white rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -90,7 +90,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
           </div>}
 
           {/* Page Content */}
-          <main className="flex-1 w-full lg:max-w-[95%] p-4 lg:p-6">
+          <main className="flex-1 w-full lg:max-w-[95%] md:p-4 lg:p-6">
             {children}
           </main>
         </div>
