@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ProfileSidebar from './ProfileSidebar';
 import StorySection from './StorySection';
 import { FiMenu, FiX } from 'react-icons/fi';
-import JobSearchBar from './SubMenu';
+import JobSearchBar from './SubMenuWrapper';
 import ProfileAvatar from './ProfileAvatar';
 import Image from 'next/image';
 

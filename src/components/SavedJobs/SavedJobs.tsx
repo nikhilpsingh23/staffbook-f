@@ -37,9 +37,9 @@ const SavedJobCard: React.FC<SavedJobCardProps> = ({ job }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-      <div className="flex">
-        {/* Left Side - Company Logo */}
-        <div className={`w-24 h-24 ${bg} flex items-center justify-center p-4`}>
+      <div className="flex flex-col sm:flex-row">
+        {/* Company Logo */}
+        <div className={`w-full sm:w-24 h-20 sm:h-24 ${bg} flex items-center justify-center p-4`}>
           <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
             <span className="text-gray-600 font-bold text-lg">
               {job.company.charAt(0)}
@@ -47,58 +47,58 @@ const SavedJobCard: React.FC<SavedJobCardProps> = ({ job }) => {
           </div>
         </div>
         
-        {/* Right Side - Job Details */}
+        {/* Job Details */}
         <div className="flex-1 p-4">
           {/* Header with job title and action icons */}
           <div className="flex items-start justify-between mb-3">
-            <div className="flex-1">
-              <h3 className="font-semibold text-gray-900 text-lg mb-1">{job.role}</h3>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <span>{job.company}</span>
-                <span>•</span>
-                <span>Posted by {job.postedBy || 'Rajeev Tripathi'}</span>
-                <span>•</span>
-                <span>{job.postedTime}</span>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-1 truncate">{job.role}</h3>
+              <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
+                <span className="truncate">{job.company}</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline">Posted by {job.postedBy || 'Rajeev Tripathi'}</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="truncate">{job.postedTime}</span>
               </div>
             </div>
             
             {/* Action Icons */}
-            <div className="flex items-center gap-2">
-              <button className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center hover:bg-purple-200 transition-colors">
-                <FiPlus className="w-4 h-4 text-purple-600" />
+            <div className="flex items-center gap-1 sm:gap-2 ml-2">
+              <button className="w-7 h-7 sm:w-8 sm:h-8 bg-purple-100 rounded-full flex items-center justify-center hover:bg-purple-200 transition-colors">
+                <FiPlus className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
               </button>
-              <button className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center hover:bg-purple-200 transition-colors">
-                <FiVideo className="w-4 h-4 text-purple-600" />
+              <button className="w-7 h-7 sm:w-8 sm:h-8 bg-purple-100 rounded-lg flex items-center justify-center hover:bg-purple-200 transition-colors">
+                <FiVideo className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600" />
               </button>
             </div>
           </div>
           
           {/* Job Attributes */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <FiHome className="w-4 h-4 text-gray-400" />
-              <span>{job.workMode}</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+              <FiHome className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />
+              <span className="truncate">{job.workMode}</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <FiBriefcase className="w-4 h-4 text-gray-400" />
-              <span>{job.hybridOption || 'Both'}</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+              <FiBriefcase className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />
+              <span className="truncate">{job.hybridOption || 'Both'}</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <FiMapPin className="w-4 h-4 text-gray-400" />
-              <span>{job.location}</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+              <FiMapPin className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />
+              <span className="truncate">{job.location}</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <FiDollarSign className="w-4 h-4 text-gray-400" />
-              <span>{job.salary || '20L-25L p.a'}</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+              <FiDollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 flex-shrink-0" />
+              <span className="truncate">{job.salary || '20L-25L p.a'}</span>
             </div>
           </div>
           
           {/* Action Buttons */}
-          <div className="flex items-center gap-3">
-            <button className="px-4 py-2 text-gray-600 bg-gray-100 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+            <button className="px-3 py-2 text-gray-600 bg-gray-100 rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-200 transition-colors">
               Remove
             </button>
-            <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors">
+            <button className="px-3 py-2 bg-purple-600 text-white rounded-lg text-xs sm:text-sm font-medium hover:bg-purple-700 transition-colors">
               View job description
             </button>
           </div>
@@ -177,7 +177,7 @@ const SavedJobs: React.FC = () => {
                       className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors first:rounded-t-lg last:rounded-b-lg"
                     >
                       <IconComponent className="w-4 h-4 text-gray-600" />
-                      <span className="text-gray-700 font-medium">{option.label}</span>
+                      <span className="text-gray-700 font-medium text-sm sm:text-base">{option.label}</span>
                     </button>
                   );
                 })}
@@ -188,7 +188,7 @@ const SavedJobs: React.FC = () => {
       </div>
 
       {/* Jobs Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         {enhancedSavedJobs.map((job, index) => (
           <SavedJobCard 
             key={index} 

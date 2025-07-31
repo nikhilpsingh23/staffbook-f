@@ -7,7 +7,7 @@ import { menuItems, inputLabels } from '../../data/subMenu';
 export default function JobSearchBar() {
   const router = useRouter();
   return (
-    <section className="w-full  bg-[#F7F7F8] py-6 md:py-2 relative">
+    <section className="w-full  bg-[#F7F7F8] py-6 md:py-2 relative hidden md:block">
       <div className="w-full max-w-[95%] mx-auto relative px-2 md:px-0">
         {/* Floating Menu */}
 
