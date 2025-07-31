@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { LOGGED_IN_LINKS, SITE_CONFIG } from '../constants/siteconfig';
 import GradientButton from './shared/GradientButton';
@@ -9,12 +9,15 @@ import { useAuth } from '../context/AuthContext';
 import { FiBell, FiMessageSquare } from 'react-icons/fi';
 import ProfileAvatar from './shared/ProfileAvatar';
 import { usePathname, useRouter } from 'next/navigation';
+import NotificationsModal from './shared/NotificationsModal';
 
 
 
 const Navbar = () => {
   const path=usePathname()
   const [menuOpen, setMenuOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const bellButtonRef = useRef<HTMLButtonElement>(null);
   const navLinks = SITE_CONFIG.navbar.navLinks;
   const signUpText = SITE_CONFIG.navbar.signUp;
   const { user } = useAuth();
@@ -46,7 +49,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <NavbarIconButton/>
+            <NavbarIconButton onNotificationsClick={() => setNotificationsOpen(true)} bellButtonRef={bellButtonRef} />
             <ProfileAvatar name={user.name} />
           </nav>
         ) : (
@@ -94,7 +97,7 @@ const Navbar = () => {
           ))}
           {user ? (
             <>
-              <NavbarIconButton />
+              <NavbarIconButton onNotificationsClick={() => setNotificationsOpen(true)} bellButtonRef={bellButtonRef} />
              
             <ProfileAvatar name={user.name} className="mt-4" size={80} />
               
@@ -109,18 +112,29 @@ const Navbar = () => {
           )}
         </div>
       )}
+      
+      {/* Notifications Modal */}
+      <NotificationsModal 
+        isOpen={notificationsOpen} 
+        onClose={() => setNotificationsOpen(false)} 
+        buttonRef={bellButtonRef}
+      />
     </div>
   );
 };
 
-export const NavbarIconButton = () => {
+export const NavbarIconButton = ({ onNotificationsClick, bellButtonRef }: { onNotificationsClick: () => void; bellButtonRef?: React.RefObject<HTMLButtonElement | null> }) => {
 
   return(
     <div className='flex flex-row gap-4'>
     <button className=" p-2 rounded-full hover:bg-gray-100 transition-colors">
               <FiMessageSquare size={22} className='text-gray-500' />
             </button>
-            <button className="ml-1 p-2 rounded-full hover:bg-gray-100 transition-colors">
+            <button 
+              ref={bellButtonRef}
+              className="ml-1 p-2 rounded-full hover:bg-gray-100 transition-colors"
+              onClick={onNotificationsClick}
+            >
               <FiBell size={22} className='text-gray-500' />
             </button>
     </div>
