@@ -2,8 +2,8 @@ import { Briefcase, Home, MessageSquare, Search, User, Save, Bell, Monitor } fro
 
 
 export const menuItems = [
-  { icon: User, label: 'Hire', href: '/hire' },
   { icon: Briefcase, label: 'Get Hired', href: '/gethire' },
+  { icon: User, label: 'Hire', href: '/hire' },
   { icon: MessageSquare, label: 'Live Chat', href: '/livechat' },
   { icon: Save, label: 'Saved Jobs', href: '/saved-jobs' },
   { icon: Bell, label: 'Subscribe', href: '/subscribe' },
