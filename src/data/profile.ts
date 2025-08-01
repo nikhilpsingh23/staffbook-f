@@ -2,7 +2,7 @@ export const user = {
   name: 'Riya Goyal',
   avatar: '/homePage/p.png',
   progress: 80,
-  role: 'UI/UX Designer',
+  role: 'UI/UX Designer | React.js | Node.js | Python | Figma',
   location: 'Bangalore, IN',
   email: 'riya@email.com',
   phone: '+91 1234567890',

@@ -60,7 +60,7 @@ export default function ProfileSidebar() {
         <div className="text-[0.875rem] font-medium font-Montserrat text-[#222]">
           HR at Appsuccessor
         </div>
-        <button className="mt-[0.75rem] w-[7.4375rem] h-[1.8125rem] bg-gradient-to-r from-[#5b5be7] to-[#b14be4] text-white text-[0.875rem] font-bold rounded-full shadow flex items-center justify-center">
+        <button onClick={()=>{}} className="mt-[0.75rem] w-[7.4375rem] h-[1.8125rem] bg-gradient-to-r from-[#5b5be7] to-[#b14be4] text-white text-[0.875rem] font-bold rounded-full shadow flex items-center justify-center">
           View Profile
         </button>
       </div>

@@ -7,7 +7,7 @@ import ProfilePerformance from './ProfilePerformance';
 
 const SkillsSidebar: React.FC = () => (
   <>
-    <div className="w-full md:w-[320px] flex-shrink-0 bg-white rounded-2xl shadow p-6 flex flex-col gap-4">
+    <div className="w-full lg:w-[320px] flex-shrink-0 bg-white rounded-2xl shadow p-6 flex flex-col gap-4">
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-2xl font-bold text-gray-900">{SITE_CONFIG.skills.section}</h3>
         <div className="flex gap-2">
@@ -34,7 +34,7 @@ const SkillsSidebar: React.FC = () => (
         ))}
       </div>
     </div>
-    <div className="mt-4 w-full md:w-[320px]">
+    <div className="mt-4 w-full lg:w-[320px]">
       <ProfilePerformance />
     </div>
   </>
