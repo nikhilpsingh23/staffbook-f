@@ -52,6 +52,39 @@ const NotificationsModal: React.FC<NotificationsModalProps> = ({ isOpen, onClose
       title: 'Your Post was liked by Sarah Smith',
       timeAgo: '6h ago',
       username: 'Sarah Smith'
+    },
+    {
+      id: '5',
+      type: 'recommendation',
+      icon: '/homePage/logo1.png',
+      title: 'HTML CSS Developer Apprentice at Innovate Solutions and 9 other recommendations for you.',
+      subtitle: 'Web Developer Role',
+      timeAgo: '3d ago'
+    },
+    {
+      id: '6',
+      type: 'like',
+      icon: '/homePage/profile.png',
+      title: 'Your Post was liked by Sarah Smith',
+      timeAgo: '6h ago',
+      username: 'Sarah Smith'
+    }
+   ,
+    {
+      id: '7',
+      type: 'recommendation',
+      icon: '/homePage/logo1.png',
+      title: 'HTML CSS Developer Apprentice at Innovate Solutions and 9 other recommendations for you.',
+      subtitle: 'Web Developer Role',
+      timeAgo: '3d ago'
+    },
+    {
+      id: '8',
+      type: 'like',
+      icon: '/homePage/profile.png',
+      title: 'Your Post was liked by Sarah Smith',
+      timeAgo: '6h ago',
+      username: 'Sarah Smith'
     }
   ]);
 
@@ -80,12 +113,12 @@ const NotificationsModal: React.FC<NotificationsModalProps> = ({ isOpen, onClose
     <div className="fixed inset-0 z-50">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+        className="absolute inset-0 "
         onClick={onClose}
       />
       
       {/* Modal positioned below button */}
-      <div className="absolute top-[75px] right-4 md:right-6 bg-white rounded-lg shadow-xl w-full max-w-sm mx-4 max-h-[60vh] overflow-hidden border border-gray-200">
+      <div className="absolute md:top-[75px]  md:right-6 bg-white rounded-lg shadow-xl w-full max-w-sm md:mx-4 md:max-h-[60vh] overflow-y-auto border border-gray-200">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <h2 className="text-lg font-bold text-[#18192B]">Notifications</h2>
@@ -138,7 +171,7 @@ const NotificationsModal: React.FC<NotificationsModalProps> = ({ isOpen, onClose
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-[var(--text-main)] font-medium leading-tight">
+                  <p className="text-xs text-gray-700 font-medium leading-tight">
                     {notification.title}
                   </p>
                   {notification.subtitle && (

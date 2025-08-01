@@ -15,7 +15,7 @@ export default function JobListings() {
   const [jobsPerPage, setJobsPerPage] = useState(8);
   const [sortBy, setSortBy] = useState('Default');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Record<string, any>>({});
+  const [activeFilters, setActiveFilters] = useState<Record<string, string | number>>({});
 
   const totalJobs = jobs.length;
   const totalPages = Math.ceil(totalJobs / jobsPerPage);
@@ -23,7 +23,7 @@ export default function JobListings() {
   const endIndex = startIndex + jobsPerPage;
   const currentJobs = jobs.slice(startIndex, endIndex);
 
-  const handleFilterChange = (filterValue: string, value: any) => {
+  const handleFilterChange = (filterValue: string, value: string | number) => {
     setActiveFilters(prev => ({ ...prev, [filterValue]: value }));
     // In a real app, you would filter the jobs based on the active filters
     console.log('Filter changed:', filterValue, value);

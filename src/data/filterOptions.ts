@@ -1,8 +1,8 @@
-import { User, Calendar, Building, Clock } from 'lucide-react';
+import { User, Calendar, Building, Clock, LucideIcon } from 'lucide-react';
 
 export interface FilterOption {
   label: string;
-  icon: any;
+  icon: LucideIcon;
   value: string;
 }
 

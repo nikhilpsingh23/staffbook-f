@@ -6,6 +6,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import JobSearchBar from './SubMenuWrapper';
 import ProfileAvatar from './ProfileAvatar';
 import Image from 'next/image';
+import { useAuth } from '@/context/AuthContext';
 
 interface ProfileLayoutProps {
   children: React.ReactNode;
@@ -20,11 +21,9 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
   showStories = true,
   showJobSearchBar = true
 }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { isSidebarOpen, setIsSidebarOpen } = useAuth();
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+
 
   return (
     <div className="min-h-screen mt-8 bg-gray-50">
@@ -32,7 +31,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
       {showSidebar && (
         <div className="hidden fixed top-18 left-2 z-50">
           <button
-            onClick={toggleSidebar}
+            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
             className=" bg-white rounded-full shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
             aria-label="Toggle sidebar"
           >
@@ -58,7 +57,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
       {showSidebar && isSidebarOpen && (
         <div
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={toggleSidebar}
+          onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
         />
       )}
 

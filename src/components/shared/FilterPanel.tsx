@@ -6,12 +6,12 @@ import { FilterOption } from '../../data/jobFilters';
 
 interface FilterPanelProps {
   filters: FilterOption[];
-  onFilterChange: (filterValue: string, value: any) => void;
+  onFilterChange: (filterValue: string, value: string | number) => void;
 }
 
 export default function FilterPanel({ filters, onFilterChange }: FilterPanelProps) {
   const [openDropdowns, setOpenDropdowns] = useState<Set<string>>(new Set());
-  const [filterValues, setFilterValues] = useState<Record<string, any>>({});
+  const [filterValues, setFilterValues] = useState<Record<string, string | number>>({});
 
   const toggleDropdown = (filterValue: string) => {
     const newOpenDropdowns = new Set(openDropdowns);
@@ -104,7 +104,7 @@ export default function FilterPanel({ filters, onFilterChange }: FilterPanelProp
               className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer slider"
               style={{
                 // Convert currentValue to a percentage of the slider range (0-100)
-                background: `linear-gradient(to right, #a259e6 ${((currentValue - (filter.min || 0)) / ((filter.max || 100) - (filter.min || 0)) * 100)}%, #e5e7eb ${((currentValue - (filter.min || 0)) / ((filter.max || 100) - (filter.min || 0)) * 100)}%)`
+                background: `linear-gradient(to right, #a259e6 ${((Number(currentValue) - (filter.min || 0)) / ((filter.max || 100) - (filter.min || 0)) * 100)}%, #e5e7eb ${((Number(currentValue) - (filter.min || 0)) / ((filter.max || 100) - (filter.min || 0)) * 100)}%)`
               }}                              
             />
           </div>

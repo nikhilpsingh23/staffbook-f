@@ -10,7 +10,7 @@ import { FiBell, FiMessageSquare } from 'react-icons/fi';
 import ProfileAvatar from './shared/ProfileAvatar';
 import { usePathname, useRouter } from 'next/navigation';
 import NotificationsModal from './shared/NotificationsModal';
-
+import { profileCompletion } from '../data/profile';
 
 
 const Navbar = () => {
@@ -20,13 +20,38 @@ const Navbar = () => {
   const bellButtonRef = useRef<HTMLButtonElement>(null);
   const navLinks = SITE_CONFIG.navbar.navLinks;
   const signUpText = SITE_CONFIG.navbar.signUp;
-  const { user } = useAuth();
+  const { user, isSidebarOpen, setIsSidebarOpen } = useAuth();
   const router = useRouter();
 
+  // Get profile completion percentage
+  const completionPercentage = profileCompletion.percent;
 
   return (
     <div className="w-full h-[70px] bg-white shadow-sm fixed top-0 z-50 overflow-x-hidden">
       <div className="w-full max-w-[1360px] mx-auto h-full flex items-center justify-between px-4 md:px-6">
+        <div className='flex flex-row gap-2'>
+      <div className="lg:hidden flex items-center gap-4 z-50">
+          <button
+            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
+            className="relative bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+            aria-label="Toggle sidebar"
+            style={{
+              background: `conic-gradient(from 0deg, #5B5DE6 0deg ${(completionPercentage / 100) * 360}deg, #e5e7eb ${(completionPercentage / 100) * 360}deg 360deg)`,
+              padding: '2px',
+              borderRadius: '50%',
+            }}
+          >
+            <div className='rounded-full overflow-hidden h-10 w-10 bg-white flex items-center justify-center'>
+              <Image
+                src={"/homePage/profile.png"}
+                alt={"profile"}
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
+            </div>
+          </button>
+        </div>
         {/* Logo Section */}
         <div className="w-[180px] h-[70px] flex items-center">
           <Image
@@ -37,9 +62,11 @@ const Navbar = () => {
             priority
           />
         </div>
+
+        </div>
         {/* Desktop Menu */}
         {user ? (
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {LOGGED_IN_LINKS.map((link) => (
               <Link
                 key={link.label}
@@ -53,7 +80,7 @@ const Navbar = () => {
             <ProfileAvatar name={user.name} />
           </nav>
         ) : (
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -72,7 +99,7 @@ const Navbar = () => {
           </nav>
         )}
         {/* Mobile Toggle */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (
               <FiX size={28} color="#101022" />
@@ -84,7 +111,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-15 md:hidden left-0 w-full min-h-screen bg-white px-6 py-4 shadow-md space-y-4 z-50 flex flex-col">
+        <div className="fixed top-15 lg:hidden left-0 w-full min-h-screen bg-white px-6 py-4 shadow-md space-y-4 z-50 flex flex-col">
           {(user ? LOGGED_IN_LINKS : navLinks).map((link) => (
             <Link
               key={link.label}
