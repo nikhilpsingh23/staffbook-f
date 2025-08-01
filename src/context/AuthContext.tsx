@@ -11,12 +11,17 @@ interface AuthContextType {
   login: (email: string, password: string) => Promise<boolean>;
   signup: (name: string, email: string, password: string) => Promise<boolean>;
   logout: () => void;
+  isSidebarOpen: boolean;
+  setIsSidebarOpen:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+ 
 
   useEffect(() => {
     // Load user from localStorage on mount
@@ -51,7 +56,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout }}>
+    <AuthContext.Provider value={{ user, login, signup, logout ,isSidebarOpen, setIsSidebarOpen}}>
       {children}
     </AuthContext.Provider>
   );

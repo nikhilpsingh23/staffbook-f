@@ -8,24 +8,25 @@ export default function MobileSubMenu() {
   const pathname = usePathname();
   console.log(pathname,"menuItems");
   return (
-    <section className="w-full bg-[#F7F7F8] py-4 md:hidden">
-      <div className="w-full max-w-[100%] mx-auto px-0">
+    <section className="w-full bg-gray-50 px-2  items-center justify-center md:hidden">
+      <div className="w-full max-w-[95%] ">
         {/* Mobile Menu Bar */}
         <div className="p-0">
-          <div className="grid grid-cols-5 items-center justify-between gap-1">
-            {menuItems.slice(0, 5).map((item, index) => {
+          <div className="flex overflow-x-auto no-scrollbar gap-2 py-4  items-center justify-start">
+            {menuItems.map((item, index) => {
               const Icon = item.icon;
-              const isActive = item.href === pathname; // You can make this dynamic based on current route
+              const isActive = item.href === pathname;
               
               return (
                 <div 
                   key={index} 
                   onClick={() => router.push(item.href)}
-                  className={`flex shadow-md flex-col items-center justify-center py-2 px-1 rounded-lg cursor-pointer transition-all duration-200 h-[80px] ${
+                  className={`flex shadow-md flex-col items-center justify-center py-2 px-3 min-w-[90px] rounded-lg cursor-pointer transition-all duration-200 h-[80px] ${
                     isActive 
                       ? 'bg-purple-200 text-white' 
-                      : 'hover:bg-gray-500 bg-white text-[#a259e6]'
+                      : 'hover:bg-gray-100 bg-white text-[#a259e6]'
                   }`}
+                  style={{ flex: '0 0 auto' }}
                 >
                   {Icon && (
                     <Icon 

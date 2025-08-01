@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import JobListings from '../../components/JobListings/JobListings';
 
-export default function Page() {
+export default function JobsPage() {
   return (
-    <div className='flex min-h-screen bg-white'
-    >page</div>
-  )
+    <JobListings />
+  );
 }
 
