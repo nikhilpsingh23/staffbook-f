@@ -343,3 +343,16 @@ export const LOGGED_IN_LINKS = [
 ];
 
 export const PROFILE_PERFORMANCE_TITLE = 'Profile Performance';
+
+export const PROFILE_MODAL = {
+  title: 'Profile',
+  viewUpdateProfile: 'View & Update Profile',
+  profilePerformance: 'Profile performance',
+  lastDays: 'Last 60 days',
+  whoSearchedYou: 'See who searched you',
+  connections: 'Connections',
+  exploreSubscriptions: 'Explore Subscriptions',
+  settings: 'Settings',
+  faqs: 'FAQ\'s',
+  logOut: 'Log Out',
+};
