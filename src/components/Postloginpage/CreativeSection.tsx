@@ -3,6 +3,7 @@
 import { Video } from 'lucide-react';
 import Image from 'next/image';
 import { CgProfile } from 'react-icons/cg';
+import SeeAllButton from '../shared/SeeAllButton';
 
 const people = [
   { name: 'Rahul Kalki', role: 'Finance Executive at Upwork', img: '/homePage/profile.png' },
@@ -18,12 +19,15 @@ export default function CreativeSection() {
     <section className="w-full py-10 bg-gray-50">
       {/* Header */}
       <div className="w-[1235px] max-w-full mx-auto flex justify-between items-center px-4">
-        <h2 className="text-[32px] text-Montserrat font-semibold text-gray-900">
+      <h2 className="text-2xl text-Montserrat font-semibold text-gray-900">
           Join over 2m <span className="text-[#7F56D9]">Creatives</span> around the world
         </h2>
-        <button className="flex text-Montserrat items-center text-sm text-[#7F56D9] font-medium">
+        {/* <button className="flex text-Montserrat items-center text-sm text-[#7F56D9] font-medium">
           See All <span className="ml-1">{'>'}</span>
-        </button>
+        </button> */}
+        <SeeAllButton>
+          See All
+        </SeeAllButton>
       </div>
 
       {/* Cards Row - Scrollable */}
