@@ -28,10 +28,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-15 md:py-20 relative overflow-x-auto">
-      <div className="w-full max-w-[1600px] px-2 md:px-4 mx-auto flex flex-col items-center text-center relative">
+    <section className="w-full bg-white py-15 md:pt-20 relative overflow-x-auto">
+      <div className="w-full max-w-full px-2 md:px-4 mx-auto flex flex-col items-center text-center relative">
         {/* Title */}
-        <h1 className="text-[28px] md:text-[48px] mt-8 mb-10 font-semibold font-[poppins] text-[#101022] leading-tight">
+        <h1 className="text-[28px] md:text-[48px] font-normal  text-gray-900 leading-tight">
           {SITE_CONFIG.homepage.heroTitle.split('with')[0]}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294] font-bold">
             {SITE_CONFIG.homepage.heroHighlight}
@@ -40,13 +40,14 @@ const Hero = () => {
           {SITE_CONFIG.homepage.heroSubtitle}
         </h1>
         {/* Map and Cards */}
-        <div className="relative w-full max-w-[1400px] min-h-[500px] md:min-h-[650px] mx-auto" ref={mapRef}>
+        <div className="relative w-full max-w-full mx-auto" ref={mapRef}>
           <Image
             src="/homePage/map.png"
             alt="World Map"
+            objectFit="cover"
             width={1400}
             height={650}
-            className="w-full h-auto select-none pointer-events-none"
+            className="w-full h-[75vh] select-none pointer-events-none"
             priority
           />
           {/* Floating Job Cards */}

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 
 const profiles = [
@@ -145,11 +146,11 @@ const StorySection = () => {
 
   return (
     <>
-      <section className="w-full bg-white flex justify-center relative">
+      <section className="w-full bg-white pl-2 flex justify-center relative">
         {/* Mobile-only gradient background */}
         <div className="absolute inset-0  z-5 block sm:hidden" />
 
-        <div className="relative w-full max-w-full z-10 mt-[0.5rem]">
+        <div className="relative w-full max-w-full z-10">
           <div
             className="w-full h-[6.25rem] sm:h-[9.375rem] md:h-[12.5rem] mt-[2rem] sm:mt-[3rem] md:mt-[3.5rem] flex items-center overflow-x-auto px-[0.5rem] space-x-[1rem] sm:space-x-[1.5rem] scrollbar-thin scrollbar-thumb-[var(--color-primary)] "
             style={{

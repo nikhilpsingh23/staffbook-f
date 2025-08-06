@@ -33,7 +33,7 @@ const PostCard: React.FC<{ post: Post }> = ({ post }) => {
           </div>
           <div className="flex items-center gap-2">
             {post.canConnect && (
-              <button className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-purple-700 transition-colors">
+              <button className="bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-purple-700 transition-colors">
                 {SITE_CONFIG.networking.connect}
               </button>
             )}
@@ -440,12 +440,6 @@ const Networking: React.FC = () => {
         </div>
 
         {/* Right Sidebar */}
-        <div className="w-80 flex-shrink-0">
-          <div className="sticky top-4 space-y-6">
-            {/* <NetworkingRightSidebar /> */}
-            {/* <RecruitersOnline /> */}
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const CategoriesWithNews = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24 overflow-hidden relative">
+    <section className="w-full bg-white overflow-hidden relative">
       {/* One Blue Blur at RIGHT between both sections */}
       <div className="absolute right-0 top-1/2 transform translate-x-[200px] -translate-y-1/2 w-[925px] h-[1029px] bg-gradient-to-br from-purple-500/30 to-blue-500/30 blur-[200px] rounded-full opacity-60 pointer-events-none z-0" />
       {/* Main container */}
@@ -47,19 +47,20 @@ const CategoriesWithNews = () => {
               {" "}{SITE_CONFIG.homepage.newsTitle.split(' ')[1]}
             </span>
           </h2>
-          <p className="text-[20px] sm:text-[24px] md:text-3xl font-medium text-gray-700 mb-12">
+          <div className="text-2xl  font-medium text-gray-700 mb-12">
             {SITE_CONFIG.homepage.newsDescription}
-          </p>
-          <div className="relative w-full max-w-4xl mx-auto mt-8">
+          </div>
+          <div className="relative max-w-xl mx-auto mt-8">
             <Image
               src="/homePage/professional.png"
               alt="Staffbook UI Mockup"
               width={1000}
-              height={800}
+              height={600}
               layout="responsive"
               objectFit="contain"
               quality={100}
               priority
+              className='w-full h-[30vh] bg-red-500 object-contain'
             />
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function ContactUsSection() {
             
             <form className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
                   {contactUs.form.name}
                 </label>
                 <input
@@ -42,7 +42,7 @@ export default function ContactUsSection() {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-1">
                   {contactUs.form.email}
                 </label>
                 <input
@@ -54,7 +54,7 @@ export default function ContactUsSection() {
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-1">
                   {contactUs.form.phone}
                 </label>
                 <input
@@ -66,7 +66,7 @@ export default function ContactUsSection() {
               </div>
               
               <div>
-                <label htmlFor="query" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="query" className="block text-sm font-medium text-gray-900 mb-1">
                   {contactUs.form.query}
                 </label>
                 <textarea

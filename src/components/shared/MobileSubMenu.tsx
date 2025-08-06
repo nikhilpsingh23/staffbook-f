@@ -8,8 +8,8 @@ export default function MobileSubMenu() {
   const pathname = usePathname();
   console.log(pathname,"menuItems");
   return (
-    <section className="w-full bg-gray-50 px-2  items-center justify-center md:hidden">
-      <div className="w-full max-w-[95%] ">
+    <section className="w-full px-2  items-center justify-center md:hidden">
+      <div className="w-full max-w-[100%] ">
         {/* Mobile Menu Bar */}
         <div className="p-0">
           <div className="flex overflow-x-auto no-scrollbar gap-2 py-4  items-center justify-start">

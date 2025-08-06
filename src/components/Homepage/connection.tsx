@@ -54,12 +54,12 @@ const ExpertsSection = () => {
         {/* Right Column */}
         <div className="md:w-1/2 w-full text-white relative flex flex-col justify-between py-10 px-4 md:px-12">
           {/* Title */}
-          <h2 className="text-[28px] md:text-[48px] font-semibold leading-tight mb-6 md:mb-0">
+          <h2 className="text-[28px] md:text-[42px] leading-tight mb-6 md:mb-0">
             {SITE_CONFIG.homepage.connectionTitle}
           </h2>
           {/* Button */}
-          <div className="flex md:justify-end">
-            <button className="h-[58px] md:h-[68px] w-full md:w-[258px] bg-white text-[#921294] text-base md:text-lg font-semibold rounded-full hover:bg-gray-100 transition">
+          <div className="flex md:justify-start">
+            <button className="h-[58px] md:h-[60px] w-full md:w-[228px] bg-white text-[#921294] text-base md:text-lg font-semibold rounded-full hover:bg-gray-100 transition">
               {SITE_CONFIG.homepage.exploreNow}
             </button>
           </div>

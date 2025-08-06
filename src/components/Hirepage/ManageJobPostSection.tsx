@@ -101,16 +101,16 @@ const ManageJobPostSection = () => {
   };
 
   return (
-    <section className="w-full flex justify-center bg-[#F7F7F8] py-8">
+    <section className="w-full flex justify-center py-8">
       <div className="w-full max-w-[71.25rem]"> {/* 1140px = 71.25rem */}
         {/* Header */}
-        <div className="w-[68.4375rem] h-[3.875rem] flex items-center justify-between mb-4"> {/* 1095px = 68.4375rem, 62px = 3.875rem */}
-          <h2 className="text-[2rem] font-Montserrat font-semibold text-[#18192B]">Manage Job Post <span className="inline-block align-middle ml-2"><svg width="22" height="22" fill="none" viewBox="0 0 22 22"><circle cx="11" cy="11" r="11" fill="#F3F4F6"/><path d="M7 11h8M11 7v8" stroke="#18192B" strokeWidth="2" strokeLinecap="round"/></svg></span></h2>
-          <input
+        <div className="max-w-[68.4375rem] h-[3.875rem] p-4 flex items-center justify-between mb-4"> {/* 1095px = 68.4375rem, 62px = 3.875rem */}
+          <div className="text-2xl font-Montserrat font-semibold text-[#18192B]">Manage Job Post</div>
+          {/* <input
             type="text"
             placeholder="Search posts..."
             className="w-[24.875rem] h-[2.375rem] rounded-[0.5rem] border border-grey-100 px-4 text-[0.875rem] focus:outline-none focus:ring-2 focus:ring-indigo-200 bg-white" // 398px = 24.875rem, 38px = 2.375rem
-          />
+          /> */}
         </div>
         {/* Cards Row */}
         <div
