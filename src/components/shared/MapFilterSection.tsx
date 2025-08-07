@@ -36,10 +36,10 @@ export default function MapFilterSection() {
   const [activeTab, setActiveTab] = useState('Near You');
 
   return (
-    <section className="w-full py-12 bg-[#f5f5f7] flex justify-center">
+    <section className="w-full py-12  flex justify-center">
       <div className="w-full max-w-[1227px] px-4 md:px-0">
         {/* Title */}
-        <h2 className="text-[32px] font-semibold text-black mb-6">Explore Jobs in Your Area</h2>
+        <div className="text-2xl font-semibold text-black mb-6">Explore Jobs in Your Area</div>
 
         {/* Main Card */}
         <div className="bg-white rounded-xl p-4 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6 h-auto md:h-[473px]">

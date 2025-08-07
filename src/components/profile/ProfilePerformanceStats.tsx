@@ -20,7 +20,7 @@ const icons: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 
 const ProfilePerformanceStats: React.FC = () => {
   return (
-    <div className="w-full bg-[#FAFAFA] rounded-2xl p-6">
+    <div className="w-full  rounded-2xl py-6">
       <div className="text-xl font-bold text-gray-900 mb-4">{PROFILE_PERFORMANCE_TITLE}</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {profilePerformanceStats.map((stat) => {

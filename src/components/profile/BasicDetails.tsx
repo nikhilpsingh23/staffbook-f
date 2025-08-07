@@ -18,12 +18,12 @@ export default function BasicDetails() {
     <div className="relative bg-white rounded-2xl shadow p-6 mb-6">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">{SITE_CONFIG.basicDetails.section}</h2>
       <button
-        className="absolute top-6 right-6 bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white rounded-full p-2 shadow hover:opacity-90 flex items-center"
-        onClick={handleEditBasicDetails}
-        aria-label="Edit Basic Details"
-      >
-        <Edit2 size={20} />
-      </button>
+          className="w-9 h-9 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer absolute top-8 right-8"
+          onClick={handleEditBasicDetails}
+          aria-label="Edit Profile Summary"
+        >
+          <Edit2 size={22} className="text-[#a259e6]" />
+        </button>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <div className="text-gray-400 text-base font-medium mb-1">{SITE_CONFIG.basicDetails.totalExperience}</div>

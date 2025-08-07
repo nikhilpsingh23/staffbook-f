@@ -26,7 +26,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
 
 
   return (
-    <div className="min-h-screen mt-8 bg-gray-50">
+    <div className="min-h-screen mt-8 bg-white">
       {/* Mobile Sidebar Toggle Button */}
       {showSidebar && (
         <div className="hidden fixed top-18 left-2 z-50">
@@ -67,7 +67,7 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
         {showSidebar && (
           <div className={`
             ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
-            lg:translate-x-0 lg:relative lg:w-80  flex-shrink-0
+            lg:translate-x-0 lg:relative lg:w-77  flex-shrink-0
             fixed lg:static top-0 left-0 h-full lg:z-0 z-50
             w-80 bg-white shadow-lg lg:shadow-none
             transition-transform duration-300 ease-in-out
@@ -80,16 +80,16 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({
         <div className="flex-1 flex flex-col">
           {/* Stories Section */}
           {showStories && (
-            <div className="w-full">
+            <div className="w-full ">
               <StorySection />
             </div>
           )}
-          {showJobSearchBar && <div className='w-full lg:max-w-[95%]'>
+          {showJobSearchBar && <div className='w-full lg:max-w-[100%]'>
             <JobSearchBar />
           </div>}
 
           {/* Page Content */}
-          <main className="flex-1 w-full lg:max-w-[95%] md:p-4 lg:p-6">
+          <main className="flex-1 w-full lg:max-w-[100%] bg-gray-100 py-6">
             {children}
           </main>
         </div>

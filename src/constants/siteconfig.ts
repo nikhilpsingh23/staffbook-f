@@ -74,7 +74,7 @@ export const SITE_CONFIG = {
             'Post one job'
           ],
           price: 'Free',
-          image: '/homePage/job-photo.png',
+          image: '/images/dummy.png',
           popular: true
         },
         {
@@ -93,7 +93,7 @@ export const SITE_CONFIG = {
             'Get the Listing of jobs near you'
           ],
           price: 'Rs. 250 for 1 month',
-          image: '/homePage/ats.png',
+          image: '/images/dummy.png',
           popular: true
         }
       ]
@@ -137,7 +137,7 @@ export const SITE_CONFIG = {
             'ATS Friendly Resume'
           ],
           price: 'Rs. 900 for 1 month',
-          image: '/homePage/resume.png',
+          image: '/images/dummy.png',
           popular: true
         }
       ]
@@ -194,7 +194,7 @@ export const SITE_CONFIG = {
     navLinks: [
       { label: 'Jobs', href: '/jobs' },
       { label: 'Networking', href: '/networking' },
-      { label: 'My Connections', href: '/connections' },
+      { label: 'My Connections', href: '/myconnection' },
       { label: 'Services', href: '/services' },
     ],
     signUp: 'Sign up',

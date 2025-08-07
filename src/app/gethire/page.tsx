@@ -17,7 +17,7 @@ export default function Page() {
           <FeaturedJobsSection width={false} />
         </div>
         <div className="w-full">
-          <MiniFeaturedJobCards width={false} />
+          <MiniFeaturedJobCards title=""  width={false} />
         </div>
         <AdBannerSection />
         <MapFilterSection />
@@ -30,7 +30,7 @@ export default function Page() {
           <FeaturedJobsSection width={false} />
         </div>
         <div className="w-full">
-          <MiniFeaturedJobCards width={false} />
+          <MiniFeaturedJobCards title="" width={false} />
         </div>
         <TwoBannerSection />
       </ProfileLayout>

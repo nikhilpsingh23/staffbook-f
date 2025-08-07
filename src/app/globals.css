@@ -29,7 +29,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-text-main: var(--text-main);
-  --color-text-gradient-to: var(--text-gradient-to);
+  --color-text-gradient-to: linear-gradient(to right, var(--primary), var(--text-gradient-to));;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -128,4 +128,13 @@ html, body {
   border-radius: 50%;
   cursor: pointer;
   border: none;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(to right, var(--primary), var(--text-gradient-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }

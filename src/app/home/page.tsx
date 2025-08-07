@@ -14,7 +14,10 @@ export default function HomePage() {
       {/* <Navbar/> */}
 
       <JobSearchBar/>
+      <div className="py-4 md:px-6">
+
       <FeaturedJobsSection/>
+      </div>
       <PopularRolesSection />
       <CreativesSection/>
       <CompanyLogoSection/>
