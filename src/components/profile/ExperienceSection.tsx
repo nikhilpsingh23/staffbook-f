@@ -64,7 +64,7 @@ export default function ExperienceSection() {
   };
 
   return (
-    <div className="w-full bg-white rounded-2xl shadow p-8 flex flex-col gap-6 relative">
+    <div className="w-full bg-white rounded-2xl shadow p-5 flex flex-col gap-6 relative">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-3xl font-bold text-gray-900">{SITE_CONFIG.experienceSection.section}</h2>
         <div className="flex gap-2 absolute top-8 right-8">

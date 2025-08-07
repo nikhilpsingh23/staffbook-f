@@ -11,10 +11,10 @@ const SkillsSidebar: React.FC = () => (
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-2xl font-bold text-gray-900">{SITE_CONFIG.skills.section}</h3>
         <div className="flex gap-2">
-          <div className="w-8 h-8 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
+          <div className="w-9 h-9 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
             <Plus size={20} className="text-[#a259e6]" />
           </div>
-          <div className="w-8 h-8 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
+          <div className="w-9 h-9 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
             <Edit2 size={20} className="text-[#a259e6]" />
           </div>
         </div>

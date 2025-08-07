@@ -8,7 +8,7 @@ export default function ProfileHeader() {
     <div className="w-full bg-white rounded-2xl shadow p-6 flex flex-col gap-6 relative">
       {/* Edit Icon */}
       <div className="absolute top-6 right-6">
-        <div className="w-10 h-10 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
+        <div className="w-9 h-9 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer">
           <Edit2 size={24} className="text-[#a259e6]" />
         </div>
       </div>
@@ -34,31 +34,31 @@ export default function ProfileHeader() {
           </div>
           <div>
             <p className="text-gray-400 ">{SITE_CONFIG.profileHeader.preferredRole}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.preferredRole}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.preferredRole}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.preferredLocation}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.preferredLocation}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.preferredLocation}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.preferredSalary}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.preferredSalary}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.preferredSalary}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.preferredShift}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.preferredShift}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.preferredShift}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.jobType}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.jobType}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.jobType}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.jobType}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.jobType}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.jobType}</p>
           </div>
           <div>
             <p className="text-gray-400">{SITE_CONFIG.profileHeader.workStatus}</p>
-            <p className="text-xl font-semibold text-gray-900">{user.workStatus}</p>
+            <p className="text-base md:text-xl font-semibold text-gray-900">{user.workStatus}</p>
           </div>
         </div>
       </div>

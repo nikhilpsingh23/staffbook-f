@@ -28,7 +28,7 @@ const cards = [
 
 export default function ProfileSidebar() {
   return (
-    <aside className="w-[20.0625rem] fixed h-full md:h-[150vh] flex flex-col items-center pt-[1.5rem] mt-[3.75rem]">
+    <aside className="w-[19.0625rem] bg-white fixed h-full md:h-[150vh] flex flex-col items-center pt-[1.5rem] mt-[3.75rem]">
       {/* Profile Section - Fixed at top */}
       <div className="flex flex-col items-center mb-[1.5rem] flex-shrink-0">
         <div className="relative flex flex-col items-center">
@@ -49,7 +49,7 @@ export default function ProfileSidebar() {
             <FiEdit2 className="text-[#B14BE4]" size={20} />
           </div>
           {/* Percentage Badge */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.125rem] bg-white px-[1rem] py-[0.25rem] rounded-full border-2 border-[#B14BE4] shadow text-[1.25rem] font-bold text-[#5B5BE7] flex items-center">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.125rem] bg-white px-3 py-1 rounded-full border-2 border-[#B14BE4] shadow text-sm font-bold text-[#5B5BE7] flex items-center">
             80%
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function ProfileSidebar() {
         <div className="text-[0.875rem] font-medium font-Montserrat text-[#222]">
           HR at Appsuccessor
         </div>
-        <button onClick={()=>{}} className="mt-[0.75rem] w-[7.4375rem] h-[1.8125rem] bg-gradient-to-r from-[#5b5be7] to-[#b14be4] text-white text-[0.875rem] font-bold rounded-full shadow flex items-center justify-center">
+        <button onClick={()=>{}} className="mt-[0.75rem] w-[7.4375rem] h-[1.8125rem] bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white text-[0.875rem] font-bold rounded-full shadow flex items-center justify-center">
           View Profile
         </button>
       </div>

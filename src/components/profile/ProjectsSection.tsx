@@ -80,7 +80,7 @@ export default function ProjectsSection() {
       {projects.map((proj: Project, idx: number) => (
         <div key={proj.name + idx} className="border-b last:border-b-0 pb-8 mb-8 flex flex-col gap-2 relative">
           <button
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer"
+            className="absolute top-4 right-0 w-8 h-8 rounded-full bg-[#f3e8ff] flex items-center justify-center cursor-pointer"
             onClick={() => handleEdit(idx)}
             aria-label="Edit Project"
           >

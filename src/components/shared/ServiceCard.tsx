@@ -11,19 +11,19 @@ export default function ServiceCard({ title, features, price, image, popular = f
     <div className="relative bg-white rounded-[20px] shadow-lg border border-gray-200 p-6 flex flex-col h-full">
       {/* Popular Badge */}
       {popular && (
-        <div className="absolute -top-3 right-4 bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white text-xs font-bold px-3 py-1 rounded-full">
+        <div className="absolute -top-3 right-4 bg-gradient-to-r from-[#5B5DE6] to-[#921294] text-white text-xs font-bold px-6 py-2 rounded-full">
           Popular
         </div>
       )}
       
       {/* Image */}
-      <div className="w-full h-[140px] rounded-[16px] mb-4 flex items-center justify-center bg-gray-50 overflow-hidden">
+      <div className="w-full h-[140px] rounded-[16px] mb-4 bg-gray-500 overflow-hidden relative">
         <Image
           src={image}
           alt={title}
-          width={120}
-          height={80}
-          className="object-contain max-h-[80px]"
+          fill
+          className="object-cover w-full h-full"
+          sizes="(max-width: 768px) 100vw, 100vw"
         />
       </div>
       

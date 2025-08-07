@@ -18,7 +18,7 @@ export default function FeaturedJobsSection({width=true}:{width?:boolean}) {
     <section className="w-full bg-[#f7f7fa] py-6 md:py-10">
       <div className={`w-full mx-auto px-3 md:px-6 ${width ? 'max-w-full' : 'max-w-6xl'}`}>
         {/* Header */}
-        <div className="flex flex-col sm:flex-row w-full justify-between items-start sm:items-center mb-4 gap-3">
+        <div className="flex flex-row w-full justify-between items-start sm:items-center mb-4 gap-3">
           <h2 className="text-xl md:text-[28px] font-bold text-gray-900">{SITE_CONFIG.featuredJobsSection.title}</h2>
           <SeeAllButton>{SITE_CONFIG.featuredJobsSection.seeAll}</SeeAllButton>
         </div>

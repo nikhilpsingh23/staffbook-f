@@ -24,7 +24,7 @@ const PopularRolesSection: React.FC = () => {
     <section className="w-full bg-transparent py-8 md:py-12">
       <div className="w-full max-w-[95%] px-2 md:px-6 mx-auto">
         <div className="flex flex-row justify-between items-center mb-6">
-          <h2 className="text-2xl md:text-3xl max-w-[80%] font-bold text-gray-900">Jobs in most popular roles</h2>
+          <h2 className="text-2xl md:text-3xl max-w-[70%] font-bold text-gray-900">Jobs in most popular roles</h2>
           <SeeAllButton>See All</SeeAllButton>
         </div>
         <div className="flex flex-col gap-4 items-center">

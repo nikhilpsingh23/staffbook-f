@@ -6,9 +6,9 @@ import NetworkingRightSidebar from './NetworkingRightSidebar';
 
 const NetworkingLayout: React.FC = () => {
   return (
-    <div className="min-h-screen w-full bg-gray-50">
-      <div className="max-w-full mx-auto px-0 md:px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-9 gap-6">
+    <div className="min-h-screen w-full bg-gray-100">
+      <div className="max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-9">
           {/* Left Sidebar */}
           {/* <div className="lg:col-span-3">
             <NetworkingSidebar />
@@ -20,7 +20,7 @@ const NetworkingLayout: React.FC = () => {
           </div>
           
           {/* Right Sidebar */}
-          <div className="lg:col-span-2 mx-4 hidden md:block">
+          <div className="lg:col-span-2 hidden md:block">
             <NetworkingRightSidebar />
           </div>
         </div>

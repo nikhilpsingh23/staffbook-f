@@ -42,15 +42,15 @@ export default function ResumeSection() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B5DE6] to-[#921294]">
             {SITE_CONFIG.homepage.resumeTitleGradient}
           </span>{' '}
-          <span className='text-gray-500'>
+          <span className='text-gray-900'>
 
           {SITE_CONFIG.homepage.resumeTitleRest}
           </span>
         </h2>
-        <p className="text-lg md:text-2xl text-center max-w-[75%] mx-auto text-gray-700 font-medium mb-10">
+        <div className="text-lg md:text-xl text-center max-w-[75%] mx-auto text-gray-700 font-medium mb-10">
           {SITE_CONFIG.homepage.resumeSubtitle}
           <br className="hidden md:block" />
-        </p>
+        </div>
         <div className="w-full ">
           <div className="grid grid-cols-3 gap-8 items-center md:scale-100  scale-90 origin-top mx-auto">
             {/* Left Steps */}
@@ -58,11 +58,14 @@ export default function ResumeSection() {
               {leftSteps.map((step: Step, index: number) => (
                 <div key={index} className="flex flex-col items-center md:items-end text-center md:text-right w-full max-w-xs">
                   <div className="flex items-center gap-2 mb-2 w-full justify-center md:justify-end">
-                    <span className="text-xs font-semibold text-gray-500">0{index + 1}</span>
+                    <span className="text-base font-semibold text-gray-500">0{index + 1}</span>
                     <div className="h-px w-full max-w-[80px] bg-gray-300" />
                   </div>
-                  <div className="mb-4">{stepIcons[index]}</div>
-                  <h4 className="text-lg md:text-xl font-bold text-[#101022] mb-1">{step.title}</h4>
+                  <div className="mb-4 scale-125">{stepIcons[index]}</div>
+                  <h4 className="text-lg md:text-xl font-bold text-[#101022] mb-1">{step.title}
+
+                    
+                  </h4>
                   <p className="text-sm text-gray-500 max-w-[200px]">{step.desc}</p>
                 </div>
               ))}
@@ -91,10 +94,10 @@ export default function ResumeSection() {
               {rightSteps.map((step: Step, index: number) => (
                 <div key={index} className="flex flex-col items-center md:items-start text-center md:text-left w-full max-w-xs">
                   <div className="flex items-center gap-2 mb-2 w-full justify-center md:justify-start">
-                    <span className="text-xs font-semibold text-gray-500">0{index + 3}</span>
+                    <span className="text-base font-semibold text-gray-500">0{index + 3}</span>
                     <div className="h-px w-full max-w-[80px] bg-gray-300" />
                   </div>
-                  <div className="mb-4">{stepIcons[index + 2]}</div>
+                  <div className="mb-4 scale-125">{stepIcons[index + 2]}</div>
                   <h4 className="text-lg md:text-xl font-bold text-[#101022] mb-1">{step.title}</h4>
                   <p className="text-sm text-gray-500 max-w-[200px]">{step.desc}</p>
                 </div>

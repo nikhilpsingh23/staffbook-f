@@ -33,13 +33,13 @@ const resumes = [
 
 const ResumeDownloadSection = () => {
   return (
-    <section className="w-full flex justify-center py-10 bg-white">
+    <section className="w-full flex justify-center mb-8 py-10 bg-white">
       <div className="w-full max-w-[1140px] px-4 md:px-6">
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        <div className="flex gap-6 md:gap-8 overflow-x-auto pb-4">
           {resumes.map((resume, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-b from-[#fff] to-[#f7f7fa] rounded-[20px] shadow-md w-full sm:w-[48%] lg:w-[22%] flex flex-col items-center pt-6 pb-6 h-[340px]"
+              className="bg-gradient-to-b from-[#fff] to-[#f7f7fa] rounded-[20px] shadow-md w-[280px] flex-shrink-0 flex flex-col items-center pt-6 pb-6 h-[340px]"
             >
               {/* Profile with Gradient Ring */}
               <div className="relative w-[116px] h-[116px] mb-4">
