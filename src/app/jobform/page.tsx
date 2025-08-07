@@ -1,3 +1,4 @@
+'use client'
 import TwoColumnLayout from "@/components/Hirepage/TwoColumnLayout";
 import JobFormSection from "@/components/Jobformpage/JobFormSection";
 import ProfileSidebar from "@/components/shared/ProfileSidebar";

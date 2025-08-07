@@ -391,7 +391,7 @@ const JobFormSection: React.FC = () => {
                   placeholder="Type your address here"
                   className="w-full px-4 text-gray-500 py-3 border border-gray-300 rounded-lg text-14 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
-                <p className="text-12 text-gray-500 mt-1">Type full address if you can't find it on map</p>
+                <p className="text-12 text-gray-500 mt-1">Type full address if you can&apos;t find it on map</p>
               </div>
               <input
                 type="text"

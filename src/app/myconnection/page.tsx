@@ -1,3 +1,4 @@
+'use client'
 import TwoColumnLayout from "@/components/Hirepage/TwoColumnLayout";
 import ConnectionRequest from "@/components/Myconnectionpage/ConnectionRequestSection";
 import NetworkSection from "@/components/Myconnectionpage/NetworkSection";
